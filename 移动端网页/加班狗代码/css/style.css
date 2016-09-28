@@ -1,0 +1,482 @@
+/*初始化页面样式*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+a,img{
+	border:0;
+}
+html,body{
+	height: 100%;
+	font-family: "微软雅黑";
+	overflow: hidden; /*去除滚动条*/
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+th{
+	font-weight: normal;
+}
+img{
+	border-style: none;
+}
+i,em{
+	font-style: normal;
+}
+
+.clearfix:after {
+	content: '.';
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+/*******************首页页面样式*******************/
+
+.ptmiddle{
+	position: relative;
+	height: 1rem;
+	width: 100%;
+	background-color: #f34336;
+}
+.ptmiddle-left{
+	float: left;
+	position: relative;
+	width: 1.4rem;
+	height: 1rem;
+}
+.ptmiddle-left div{
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 0.3rem;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.ptmiddle-left span{
+	display: inline-block;
+}
+.ptmiddle-left img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 0.4rem;
+}
+.ptmiddle-right{
+	float: right;
+}
+.ptmiddle-right p{
+	display: inline-block;
+	position: relative;
+	top: -0.4rem;
+	padding-right: 2.8rem;
+	line-height: 1rem;
+	font-size: 0.3rem;
+	color: #fff;
+}
+
+.pbmiddle-left{
+	float: left;
+	width: 1.4rem;
+	height: 100%;
+	background-color: #f4f4f4;
+}
+.pbmiddle-left li{
+	position: relative;
+	width: 1.4rem;
+	height: 1.4rem;
+}
+.pbmiddle-left span{
+	display: inline-block;
+	height: 0.6rem;
+	width: 0.6rem;
+	border-radius: 0.3rem;
+	background-color: #dbdbdb;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.pbmiddle-left img{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 0.4rem;
+}
+.pbmiddle-left p{
+	display: inline-block;
+	font-size: 0.3rem;
+	color: #3a3a3a;
+	margin-left:  0.42rem;
+	margin-top: 1.1rem;
+}
+.pbmiddle-right{
+	float: left;
+}
+.list{
+	font-size: 0.3rem;
+}
+.list1-course{
+	position: absolute;
+	top: 1.2rem;
+	font-size: 0.24rem;
+}
+.list1-ul li{
+	position: relative;
+	top: 0.3rem;
+	height: 100%;	
+}
+.list1-img,.list2-img{
+	display: inline-block;
+	width: 5.7rem;
+}
+.list1-p1{
+	font-size: 0.3rem;
+}
+.list1-p2,.list2-p2{
+	display: inline-block;
+	font-size: 0.26rem;
+	position: relative;
+}
+.list1-p2{
+	top: -0.65rem;
+}
+.list1-i,.list2-i{
+	font-size: 0.26rem;
+	color: #3a3a3a;
+}
+.list1-span,.list2-span{
+	display: inline-block;
+	font-size: 0.3rem;
+	position: relative;
+	width: 0.4rem;
+	height: 0.4rem;
+	border-radius: 0.2rem;
+	background-color: #F00;
+	margin-left: 3.9rem;
+}
+.list1-span{
+	top: -0.65rem;
+}
+.list1-span p,.list2-span p{
+	padding-left: 0.09rem;
+	color: #fff;
+}
+.list2-img{
+	position: relative;
+	top:-0.5rem;
+}
+.list2-p1{
+	position: relative;
+	top: -0.5rem;
+	font-size: 0.3rem;
+}
+.list2-p2{
+	top: -1.15rem;
+}
+.list2-span{
+	top: -1.15rem;
+}
+
+
+/*******************菜单页页面样式*******************/
+
+/*页面样式*/
+.parent{
+	height: 100%;
+	overflow: hidden; /*去除滚动条*/
+}
+.top{
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	height: 0.9rem;
+	background-color: #000;
+}
+.middle{
+	position: absolute;
+	top: 0.9rem;
+	left: 0;
+	right: 0;
+	bottom: 1rem;
+	min-height: 1.3rem;
+	background-color: #f4f4f4;
+	overflow: auto; /*加内容区滚动条*/
+}
+.bottom{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1rem;
+	background-color: #3e3a39;
+}
+
+/*顶部样式*/
+.top-left,.top-middle,.top-right{
+	height: 0.9rem;
+	line-height: 0.9rem;
+	font-size: 0.36rem;
+	color: #fff;
+	
+}
+.top-left{
+	margin-left: 0.22rem;
+	float: left;
+	cursor: pointer;
+}
+.top-middle{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	font-weight: bold;
+}
+.top-right{
+	right: 0;
+	margin-right: 0.64rem;
+	float: right;
+	cursor: pointer;
+}
+
+
+/*中部样式*/
+.middlet{
+	position: relative;
+	height: 1rem;
+	background-color: #fff;
+}
+.middlet-left,.middlet-right{
+	color: #555555;
+	height: 1rem;
+	line-height: 1rem;
+}
+.middlet-left{
+	float: left;
+	margin-left: 0.26rem;
+	font-size: 0.4rem;
+	cursor: pointer;
+}
+.middlet-right{
+	float: right;
+	font-size: 0.36rem;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+
+.middlem table{
+	margin-top: 0.3rem;
+	background-color: #fff;
+	width: 100%; 
+}
+.middlem table th{
+	padding-left: 0.3rem;
+	text-align: left;
+	border-bottom: 1px dashed #dbdbdb;
+	font-size: 0.26rem;
+	color: #63696e;
+}
+.middlem table td{
+	border-bottom: 1px solid #dbdbdb;
+	font-size: 0.3rem;
+	color: #333333;
+}
+.middlem table tr>td{
+	padding-left: 0.3rem;
+}
+.middlemtr span{
+	display: inline-block;
+	float: left;
+}
+.middlemsimg{
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 0.3rem;
+	overflow: hidden;
+}
+.middlems{
+	padding-top: 0.1rem;
+	padding-left: 0.2rem;
+}
+.decrease,.raise{
+	display: inline-block;
+	height: 0.5rem;
+	width: 0.5rem;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	text-align: center;
+	font-size: 0.26rem;
+	
+}
+.decrease{
+	border: 1px solid red;
+	margin-right: 0.3rem; 
+}
+.raise{
+	background-color: red;
+	margin-left: 0.3rem;
+}
+
+.middleb{
+	position: absolute;
+	bottom: 0rem;
+	height: 0.9rem;
+	width: 100%;
+	background-color: #fff;
+}
+.middleb-mark{
+	/*position: absolute;*/
+	padding-left: 0.3rem;
+	line-height: 0.9rem;
+	font-size: 0.24rem;
+	color: #999999;
+}
+
+/*底部样式*/
+.bottom-left,.bottom-right{
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.3rem;
+	color: #fff;
+}
+.bottom-left{
+	float: left;
+	margin-left: 0.3rem;
+}
+.bottom-right{
+	float: right;
+	position: relative;
+	width: 2.26rem;
+	background-color: #f34336;
+}
+.bright-middle{
+	position: absolute;
+	left: 45%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+/*遮罩层样式*/
+.mask{
+	position: absolute;
+	width: 7.6rem;
+	height: 14rem;
+	background-color: rgba(0,0,0,.7);
+	
+}
+.popup{
+	position: relative;
+	top: 4.3rem;
+	left: 1rem;
+	background-color: #fff;
+	width: 5.4rem;
+	height: 2.4rem;
+	border-radius: 0.25rem;
+	
+}
+.show-header{
+	position: absolute;
+	top: 0;
+	height: 1.6rem;
+	width: 100%;
+}
+.show-footer{
+
+}
+.pop-up{
+	position: relative;
+	width: 5.4rem;
+	height: 2.4rem;
+}
+.show-body{
+	font-size: 0.3rem;
+	color: #000;
+	line-height: 1.6rem;
+	text-align: center;
+	z-index: 101;
+}
+.footer-left,.footer-right{
+	position: absolute;
+	top: 1.8rem;
+	display: inline-block;
+	font-size: 0.3rem;
+	color: #F00;
+}
+.footer-left{
+	left: 1.1rem;	
+}
+.footer-right{
+	right: 1.1rem;	
+}
+.dialogClass{
+	visibility: hidden;
+}
+.dialoginfo{
+	visibility: visible;
+}
+
+/*******************提示页页面样式*******************/
+
+.adcontainer{
+	position: absolute;
+	top: 0.9rem;
+	left: 0;
+	height: 12rem;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+.adtop{
+	margin-left: 2rem;
+	margin-top: 2.3rem;
+	width: 4.6rem;
+	height: 3.4rem;
+}
+.adtopimg{
+	position: relative;
+	height: 2.2rem;
+	width: 2.2rem;
+	border-radius: 1.1rem;
+	margin-left: 0.6rem;
+	background-color: #fff;
+}
+.adtopimg img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 0.9rem;
+}
+.adtopp{
+	margin-top: 0.3rem;
+	font-size: 0.3rem;
+	color: #999999;
+}
+.adbottom{
+	position: relative;
+	margin-left: 2.3rem;
+	width: 2.8rem;
+	height: 0.8rem;
+	border-radius: 0.1rem;
+	background-color: #F00;
+}
+.adbottomp{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: inline-block;
+	font-size: 0.3rem;
+	color: #fff;
+}

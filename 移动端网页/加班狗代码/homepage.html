@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>加班狗首页</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/vue-router.js"></script>
+	<style type="text/css">
+		.homepage-bright{
+			background-color: #6b615e;
+		}
+		.homepage-bmiddle{
+			color: #999999;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	<div class="top clearfix">
+		<div class="top-left">&lt;返回</div>
+		<div class="top-middle">三斤耗儿鱼-点菜</div>
+		<div class="top-right">···</div>
+	</div>
+	<div class="middle">
+		<div class="ptmiddle clearfix">
+			<div class="ptmiddle-left"><div><span><img src="images/homepage1.png"></span></div></div>
+			<div class="ptmiddle-right"><p>渝北店，8号桌</p></div>
+		</div>
+		<div class="pbmiddle" id="idpbmiddle">
+			<ul class="pbmiddle-left" >
+				<li>
+					<a v-link="{path: '/maincourse'}">
+					<span><img src="images/homepage2.png"></span>
+					<p>主菜</p></a>
+				</li>
+				<li>
+					<a v-link="{path: '/hotcourse'}">
+					<span><img src="images/homepage3.png"></span>
+					<p>热菜</p></a>
+				</li>
+				<li>
+					<a v-link="{path: '/coldcourse'}">
+					<span><img src="images/homepage4.png"></span>
+					<p>凉菜</p></a>
+				</li>
+				<li>
+					<a v-link="{path: '/hotwater'}">
+					<span><img src="images/homepage5.png"></span>
+					<p>汤品</p></a>
+				</li>
+				<li>
+					<a v-link="{path: '/dessert'}">
+					<span><img src="images/homepage6.png"></span>
+					<p>点心</p></a>
+				</li>
+			</ul>
+			<template id="list1">
+				<p class="list1-course">主菜</p>
+				<ul class="list1-ul">
+					<li>
+						<img class="list1-img" src="images/homepage7.jpg">
+						<p class="list1-p1">三斤耗儿鱼</p>
+						<p class="list1-p2">￥238<span class="list1-i">/锅</sapn></p>
+						<span class="list1-span"><p>+</p></span>
+					</li>
+					<li>
+						<img class="list2-img" src="images/homepage8.jpg">
+						<p class="list2-p1">鱼香茄龙</p>
+						<p class="list2-p2">￥238<span class="list2-i">/份</sapn></p>
+						<span class="list2-span"><p>+</p></span>
+					</li>
+				</ul>
+			</template>
+			<template id="list2"><p class="list">我是热菜</p></template>
+			<template id="list3"><p class="list">我是凉菜</p></template>
+			<template id="list4"><p class="list">我是汤品</p></template>
+			<template id="list5"><p class="list">我是点心</p></template>
+			<div class="pbmiddle-right">
+				<router-view></router-view>
+			</div>
+		</div>
+	</div>
+	<div class="bottom clearfix">
+		<div class="bottom-left">已点<em>0</em>道菜</div>
+		<div class="bottom-right homepage-bright"><a class="bright-middle homepage-bmiddle" v-on:click="openDialog">已点菜单</a></div>
+	</div>
+
+</div>
+
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="js/homepage-script.js"></script>
+</body>
+</html>

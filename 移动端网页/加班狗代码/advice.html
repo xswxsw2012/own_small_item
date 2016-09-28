@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>加班狗提示页</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<div class="parent">
+	<div class="top clearfix">
+		<div class="top-left">&lt;返回</div>
+		<div class="top-middle">三斤耗儿鱼-点菜</div>
+		<div class="top-right">···</div>
+	</div>
+	<div class="adcontainer"> 
+		<div class="adtop">
+			<div class="adtopimg"><img src="images/advice.png" alt="等待做菜图片"></div>
+			<p class="adtopp">厨房已开始制作，请耐心等候</p>
+		</div>
+		<div class="adbottom">
+			<p class="adbottomp">继续点菜</p>
+		</div>
+	</div>
+		
+</div>
+
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="js/menu-script.js"></script>
+</body>
+</html>

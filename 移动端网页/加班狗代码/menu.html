@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>加班狗菜单页</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<div class="parent">
+	<div class="top clearfix">
+		<div class="top-left">&lt;返回</div>
+		<div class="top-middle">三斤耗儿鱼-点菜</div>
+		<div class="top-right">···</div>
+	</div>
+	<div class="middle">
+		<div class="middlet clearfix">
+			<div class="middlet-left">&lt;</div>
+			<div class="middlet-right">确认订单</div>
+		</div>
+		<div class="middlem" id="middle-mid" >
+			<table v-for="(outindex,item) in items" >
+				<tr class="middlemtr">
+					<th  colspan=3>
+					<span class="middlemsimg"><img src="{{ item.pic }}" alt="客户图片"></span>
+					<span class="middlems">{{item.name}}</span></th>
+				</tr>
+				<tr v-for="food in item.menus">
+					<td>{{food.menu}}</td>
+					<td>{{food.price|}}<span>/锅</span></td>
+					<td><span v-on:click="reduce(outindex,$index)"><i class="decrease">-</i></span>{{food.count}}<span v-on:click="add(outindex,$index)"><i class="raise">+</i></span></td>
+				</tr>
+			</table>
+		</div>
+		<div class="middleb">
+			<div class="middleb-mark">备注：（选填）请输入您的口味、要求、忌口等</div>
+		</div>
+	</div>
+	<div class="bottom clearfix">
+		<div class="bottom-left">已点{{icount}}道菜</div>
+		<div class="bottom-right"><a class="bright-middle" v-on:click="openDialog">传送厨房</a></div>
+	</div>
+	<!-- 确认框效果 -->
+	
+	<template id="dialog-template" >
+		<div v-bind:class="{'mask':show}">
+			<div class="popup">
+				<div class="pop-up">
+					<slot name="body"></slot>
+					<slot name="footer"></slot>
+				</div>
+			</div>
+		</div>
+	</template>
+	
+	<modal-dialog v-bind:show.sync="show" v-bind:class="dialogClass">
+		
+			<header slot="body" class="show-header">
+				<p class="show-body">确定让厨房开始制作菜品了吗？</p>
+			</header>
+			<footer slot="footer" class="show-footer">
+				<a v-on:click="closeDialog" class="footer-left">取消</a>
+				<a v-on:click="sureDialog"  class="footer-right">确定</a>
+			</footer>
+
+	</modal-dialog>
+</div>
+
+<script>
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		};
+
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+<script type="text/javascript" src="js/menu-script.js"></script>
+</body>
+</html>
