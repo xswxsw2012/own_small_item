@@ -1,5 +1,5 @@
 window.onload=function(){
-	//banner轮播图
+/***************************************banner轮播图*****************************************************/
 	var picture0=document.getElementById('picture0');
 	var picture1=document.getElementById('picture1');
 	var buttons=document.getElementById('buttons').getElementsByTagName('span');
@@ -79,4 +79,8 @@ window.onload=function(){
 	picture0.onmouseover=stop;
 	picture1.onmouseover=play;
 	play();
+
+/*************************关闭顶部通知条，cookie实现******************************************/
+	
+
 }
