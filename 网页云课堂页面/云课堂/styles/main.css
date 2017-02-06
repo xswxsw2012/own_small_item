@@ -130,8 +130,10 @@ footer, header, nav {
 	height: 376px;
 	z-index: 1
 }
-#picture1 img{
+#picture1 a{
+	display: block;
 	width: 1348px;
+	height: 100%;
 	float: left;
 }
 #buttons{
