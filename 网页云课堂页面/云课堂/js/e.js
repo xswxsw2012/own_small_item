@@ -165,6 +165,165 @@ window.onload=function(){
 		}
 	}
 
+/***********************************获取课程数据***********************************************************/
+	var setCourse = {
+		url:'http://study.163.com/webDev/couresByCategory.htm',
+		//添加元素
+		addElements:function(getdata){
+			var _data = JSON.parse(getdata),li,div,img,h4,span,em,strong,h_div,h_img,h_i,h_em,h_span1,h_span2,h_p,elem;
+			var pd = document.getElementsByClassName('m-pd')[0];
+			var pl = document.getElementsByClassName('m-pl')[0];
+			if(getComputedStyles(pd).display == 'block'){  //getComputeStyles()方法返回CSSStyleDeclaration对象，其中包含当前元素的所有计算的样式
+				elem = pd;
+			}else{
+				elem = pl;
+			}
+			for(var i = 0;i <_data.list.length;i++){
+				//创建hover前的节点，展示节点
+				li = document.createElement('li');
+				div = document.createElement('div');
+				img = document.createElement('img');
+				h4 = document.createElement('h4');
+				span = document.createElement('span');
+				em = document.createElement('em');
+				strong = document.createElement('strong');
+				//创建hover后的节点，展示节点
+				h_div = document.createElement('div');
+				_div = document.createElement('div');
+				h_img = document.createElement('img');
+				h_i = document.createElement('i');
+				h_em = document.createElement('em');
+				h_span1 = document.createElement('span');
+				h_span2 = document.createElement('span');
+				h_p = document.createElement('p');
+				//设置展示节点属性和内容
+				li.setAttribute('class','m-card');
+				div.setAttribute('class','card');
+				img.setAttribute('src',_data.list[i].middlePhotoUrl);
+				img.setAttribute('alt',_data.list[i].name);
+				h4.innerHTML = _data.list[i].name;
+				span.innerHTML = _data.list[i].provider;
+				em.innerHTML = _data.list[i].learnerCount;
+				if(_data.list[i].price == 0){
+					strong.innerHTML = '免费';
+				}else{
+					strong.innerHTML = '&yen;' + _data.list[i].price;
+				}
+				//设置隐藏节点属性和内容
+				h_div.setAttribute('class','hover');
+				h_i.setAttribute('class','p-title');
+				h_p.setAttribute('class','description');
+				h_img.setAttribute('src',_data.list[i].bigPhotoUrl);
+				h_img.setAttribute('alt','_data.list[i].name');
+				h_em.innerHTML = _data.list[i].name;
+				h_em.innerHTML = _data.list[i].learnerCount;
+				h_span1.innerHTML = '发布者：' + _data.list[i].provider;
+				if(_data.list[i].categoryName == null){
+					h_span2.innerHTML = '分类：无';
+				}else{
+					h_span2.innerHTML = '分类：' + _data.list[i].categoryName;
+				}
+				h_p.innerHTML = _data.list[i].description;
+				elem.appendChild(li);   //把li标签连接到ul上
+				li.appendChild(div);
+				div.appendChild(img);
+				div.appendChild(h4);
+				div.appendChild(span);
+				div.appendChild(em);
+				div.appendChild(strong);
+				li.appendChild(h_div);  //把hover的div连接到li标签上
+				h_div.appendChild(_div);
+				_div.appendChild(h_img);
+				_div.appendChild(h_i);
+				_div.appendChild(h_em);
+				_div.appendChild(h_span1);
+				_div.appendChild(h_span2);
+				h_div.appendChild(h_p);
+				(function(div,h_div){
+					var handler1 = function(event){
+						div.style.display = 'none';
+						h_div.style.display = 'block';
+					};
+					var handler2 = function(event){
+						h_div.style.display = 'none';
+						div.style.display = 'block';
+					} ;
+					EventUtil.addHandler(div, "mouseover", handler1);
+					EventUtil.addHandler(h_div, "mouseleave", handler2);
+				})(div,h_div);
+			}
+			var list = document.getElementsByClassName('m-card',elem),n=0; //从指定的elem中找m-card，速度比document快得多
+			//固定定位布局课程列表
+			if(list.length == 20){
+				for(var i = 0; i < 5; i++){
+					for(var j = 0; j < 4; j++){
+						list[n].style.left = j*240 + "px";
+						list[n].style.top = i*245 + "px";
+						n++;
+						if(n>list.length) break;
+					};
+				}
+			}else{
+				for(var i = 0; i < 3; i++){
+					for(var j = 0 ;j < 5; j++ ){
+						list[n].style.left = i*240 + "px";
+						list[n].style.top = j*245 + "px";
+						n++;
+						if(n>list.length) break;
+					};
+				}
+			}
+		}
+	}
+	//设置课程请求参数，但是不能够动态修改查询的个数，需要刷新
+	function parameters(){
+		function type(){ //筛选类型
+			var pc = document.getElementById('product-design'),
+				style = getComputedStyles(pc).display;
+			if(style == 'block'){
+				return 10; //10表示类型是产品设计
+			}else{
+				return 20; //20表示类型是编程语言
+			}
+		}
+		function querySize(){ //每页返回数据个数
+			var x = window.innerWidth;
+			if(x <= 1205){
+				return 15;
+			}else{
+				return 20;
+			}
+		}
+		var data = {'pageNo':1,'psize':querySize(),'type':type()};
+		return data;
+	}
+	get(setCourse.url,parameters(),setCourse.addElements); //调用get请求
+
+	//实现产品设计和编程语言的点击切换
+	var t_pc = document.getElementById('pc'),
+		t_pl = document.getElementById('pl'),
+		pc = document.getElementById("product-design"),
+		pl = document.getElementById("programing-language"),
+		handler3 = function(event){  //点击产品执行的操作
+			removeClassName(t_pl,'active');
+			addClassName(t_pc,'active');
+			pc.style.display = 'block';
+			pl.style.display = 'none';
+		},
+		handler4 = function(event){  //点击编程语言执行的操作
+			removeClassName(t_pc,'active');
+			addClassName(t_pl,'active');
+			pl.style.display = 'block';
+			pc.style.display = 'none';
+			pl.innerHTML = '';
+			get(setCourse.url,parameters(),setCourse.addElements);
+		};
+
+	EventUtil.addHandler(t_pc, "click", handler3);  //点击产品设计
+	EventUtil.addHandler(t_pl, "click", handler4);  //点击编程语言
+
+
+
 /************************************部分公用函数**********************************************************************/
 
 	//添加类名，如果类名存在，则不添加
@@ -213,6 +372,7 @@ window.onload=function(){
 			if(xhr.readyState == 4){ //4表示已经接收到全部响应数据
 				if(xhr.status >= 200 && xhr.status < 300||xhr.status == 304){//响应的HTTP状态，304表示请求的资源没有被修改，可以使用浏览器中缓存的版本,响应也是有效的
 					callback(xhr.responseText); //作为响应主体被返回的文本
+					console.log(xhr.responseText);
 				}else{
 					alert('Request was unsuccessfull:' + xhr.status);
 				}
@@ -227,4 +387,12 @@ window.onload=function(){
 		xhr.send(null);
 	}
 
+	//获取原有样式，getComputedStyles()方法返回CSSStyleDeclaration对象，其中包含当前元素的所有计算的样式
+	function getComputedStyles(element){
+		if(window.getComputedStyle){
+			return window.getComputedStyle(element);  //火狐浏览器
+		}else{
+			return element.currentStyle;   //IE浏览器
+		}
+	}
 }
