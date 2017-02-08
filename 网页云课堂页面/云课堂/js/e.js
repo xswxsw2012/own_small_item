@@ -252,22 +252,23 @@ window.onload=function(){
 					EventUtil.addHandler(h_div, "mouseleave", handler2);
 				})(div,h_div);
 			}
-			var list = document.getElementsByClassName('m-card',elem),n=0; //从指定的elem中找m-card，速度比document快得多
+			var list = elem.getElementsByClassName('m-card'),n=0; //从指定的elem中找m-card，速度比document快得多
 			//固定定位布局课程列表
-			if(list.length == 20){
+			if(list.length >= 20){
 				for(var i = 0; i < 5; i++){
 					for(var j = 0; j < 4; j++){
 						list[n].style.left = j*240 + "px";
 						list[n].style.top = i*245 + "px";
 						n++;
-						if(n>list.length) break;
+						if(n>20) break;
 					};
 				}
-			}else{
+			}
+			else{
 				for(var i = 0; i < 3; i++){
-					for(var j = 0 ;j < 5; j++ ){
-						list[n].style.left = i*240 + "px";
-						list[n].style.top = j*245 + "px";
+					for(var j = 0 ;j < 4; j++ ){
+						list[n].style.left = j*240 + "px";
+						list[n].style.top = i*245 + "px";
 						n++;
 						if(n>list.length) break;
 					};
@@ -309,18 +310,55 @@ window.onload=function(){
 			addClassName(t_pc,'active');
 			pc.style.display = 'block';
 			pl.style.display = 'none';
+			// pc.innerHTML = '';
+			get(setCourse.url,parameters(),setCourse.addElements);
 		},
 		handler4 = function(event){  //点击编程语言执行的操作
 			removeClassName(t_pc,'active');
 			addClassName(t_pl,'active');
-			pl.style.display = 'block';
 			pc.style.display = 'none';
+			pl.style.display = 'block';
 			pl.innerHTML = '';
 			get(setCourse.url,parameters(),setCourse.addElements);
 		};
 
 	EventUtil.addHandler(t_pc, "click", handler3);  //点击产品设计
 	EventUtil.addHandler(t_pl, "click", handler4);  //点击编程语言
+
+	//分页选择
+	function selectPage(){    //分页操作中编程语言不能按页请求，转换时也不能对应当前页(这个功能没做)
+		var libtn = document.getElementsByClassName('l-btn')[0].getElementsByTagName('li'),elem;
+		function estyle(){
+			var pc = document.getElementById('product-design'),
+				pl = document.getElementById('programing-language'),
+				style = getComputedStyles(pc).display;
+			if(style = 'block'){
+				return pc;
+			}else{
+				return pl;
+			}
+		}
+		for(var i = 0; i < libtn.length; i++){
+			(function(i){
+				if(i != 0 && i != libtn.length-1){
+
+					var handler5 = function(event){  //点击分页按钮执行的操作
+						for(var j = 0; j < libtn.length; j++){
+							removeClassName(libtn[j],'checked');
+						}
+						var x = parameters(); //parameters()是一个函数，也可看做对象
+						x.pageNo = i;        //parameters()返回的是一个对象，这里在动态修改pageNo参数，确定每页请求到的数据
+						addClassName(libtn[i],'checked');
+						elem = estyle();  //获得class确定当前显示的页面
+						elem.innerHTML='';
+						get(setCourse.url,x,setCourse.addElements); 
+					}
+					EventUtil.addHandler(libtn[i], "click", handler5);  //添加点击分页事件
+				}
+			})(i);
+		}
+	}
+	selectPage();  //运行选择页面函数
 
 
 
@@ -372,7 +410,7 @@ window.onload=function(){
 			if(xhr.readyState == 4){ //4表示已经接收到全部响应数据
 				if(xhr.status >= 200 && xhr.status < 300||xhr.status == 304){//响应的HTTP状态，304表示请求的资源没有被修改，可以使用浏览器中缓存的版本,响应也是有效的
 					callback(xhr.responseText); //作为响应主体被返回的文本
-					console.log(xhr.responseText);
+					// console.log(xhr.responseText);
 				}else{
 					alert('Request was unsuccessfull:' + xhr.status);
 				}

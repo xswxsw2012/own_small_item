@@ -9,6 +9,7 @@ html {
 }
 body {
 	height: 100%;
+	background-color: #f8f8f8;
 }
 a {
 	text-decoration: none;
@@ -242,7 +243,8 @@ footer, header, nav {
 .footer{
 	height:260px;
 	width: 100%;
-	background-color: #2C3339
+	margin-top: 30px;
+	background-color: #2C3339;
 }
 .footer1,.footer2,.footer3,.footer4{
 	float: left;
@@ -279,6 +281,7 @@ footer, header, nav {
 	width:980px;
 	margin-top:20px;
 	margin-left:50px;
+	/*margin: 26px auto;*/
 	height: 1220px;
 }
 /*.m-pd{
@@ -291,6 +294,8 @@ footer, header, nav {
 	position: absolute;
 	width: 223px;
 	height: 227px;
+	background-color: #fff;
+	box-shadow: 0 1px 0.5px #e6e6e6;
 	cursor: pointer;
 }
 /*.card{
@@ -307,7 +312,47 @@ footer, header, nav {
 	box-shadow: 1px 1px 0.5px #c1c0c0,-1px -1px 0.5px #d3d1d2;
 	z-index: 600;
 }
-
+.exit{
+	/*position: absolute;*/
+	float: left;
+	/*width:480px;
+	height: 1440px;*/
+}
+.l-btn{
+	/*float: right;*/
+	position: relative;
+	left: 680px;
+	width: 302px;
+	height: 20px;
+}
+.l-btn li{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 1px 0;
+	font-size: 1em;
+	line-height: 20px;
+	text-align: center;
+	color: #666;
+	cursor: pointer;
+}
+.l-btn li:first-child{
+	width: 30px;
+	height: 20px;
+	background-color: #9dd8b1;
+}
+.l-btn li:last-child{
+	width: 30px;
+	height: 20px;
+	background-color: #9dd8b1;
+}
+.l-btn li:hover{
+	background-color: #9dd8b1;
+	color: #fff;
+}
+.l-btn .checked{
+	color: #39a030;
+}
 
 .content5-2-1{
 	float:left;
@@ -376,10 +421,21 @@ footer, header, nav {
 	font-size:14px;
 }
 .content5-3-3{
-	width:200px;
-	height:200px;
-	padding-left:20px;
-	margin-top:-40px;
+	width:180px;
+	height:110px;
+	margin-left:25px;
+	margin-top:20px;
+	background-image: url("../images/orgIntro.png");
+	background-repeat: no-repeat;
+	background-position-x: -190px;
+
+	/*background-size: 100% 100%;*/
+}
+.g-pop{
+	display: none;
+	position: absolute;
+	width: 500px;
+	height: 800px;
 }
 .content5-4{
 	float:right;
