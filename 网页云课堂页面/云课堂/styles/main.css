@@ -428,14 +428,56 @@ footer, header, nav {
 	background-image: url("../images/orgIntro.png");
 	background-repeat: no-repeat;
 	background-position-x: -190px;
+	cursor: pointer;
 
 	/*background-size: 100% 100%;*/
 }
 .g-pop{
 	display: none;
+	position: fixed;   /*相对于屏幕定位*/
+	width: 100%;
+	height: 100%;
+	background-color: rgba(000,000,000,0.8);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=#88000000,endColorstr=#88000000);  /*滤镜,不很明白*/
+	z-index: 1000;
+}
+.popvideo{
+	position: fixed;
+	box-sizing: border-box;
+	left: 50%;
+	top: 50%;
+	margin-left: -475px;
+	margin-top: -338px;
+	width: 950px;
+	height: 676px;
+	background-color: #fff;
+}
+#v-close{
 	position: absolute;
-	width: 500px;
-	height: 800px;
+	top: 20px;
+	right: 8px;
+	width: 11px;
+	height: 11px;
+	background: url("../images/main.png") no-repeat -253px -95px;
+	cursor: pointer;
+}
+
+.popvideo span{
+	display: block;
+	font-size: 1em;
+	margin-top: 20px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+.popvideo video{
+	display: block;
+	margin: 20px auto;
+	width: 890px;
+	height: 568px;
+}
+.popvideo video span{
+	margin-top: 30px;
+	margin-left: 30px;
 }
 .content5-4{
 	float:right;

@@ -360,7 +360,45 @@ window.onload=function(){
 	}
 	selectPage();  //运行选择页面函数
 
+/*************************************点击播放视频和关闭视频******************************************/
+	var cvideo = document.getElementsByClassName('content5-3-3')[0],
+		pvideo = document.getElementsByClassName('g-pop')[0],
+		closev = document.getElementById('v-close'),
 
+		handler6 = function(event){
+			pvideo.style.display = 'block';
+		},
+		handler7 = function(event){
+			pvideo.style.display = "none";
+			video.pause();  //暂停视频
+		}
+
+		EventUtil.addHandler(cvideo, "click", handler6);  //添加点击播放视频的事件 
+		EventUtil.addHandler(closev, "click", handler7);  //添加关闭视频的事件
+
+
+/*************************************右侧最热排行*****************************************************************/
+	var topCourse = {
+		url:'http://study.163.com/webDev/hotcouresByCategory.htm',
+		addElements:function(getdata){
+			var _data = JSON.parse(getdata),div,li,img,a,span;
+			var ul = document.getElementById('t-list');
+			for(var i = 0; i < _data.length; i++){
+				li = document.createElement('li');
+				img = document.createElement('img');
+				a = document.createElement('a');   //创建标签s
+				span = document.createElement('span');
+				img.setAttribute('src',_data[i].smallPhotoUrl);
+				a.innerHTML = _data[i].name;  //给标签添加内容
+				span.innerHTML = _data[i].learnerCount;
+				ul.appendChild(li);
+				li.appendChild(img);
+				li.appendChild(a);
+				li.appendChild(span);
+			}
+		}
+	}
+	get(topCourse.url,'',topCourse.addElements);  //给右侧最热排行请求数据
 
 /************************************部分公用函数**********************************************************************/
 
