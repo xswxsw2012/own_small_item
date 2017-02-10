@@ -31,7 +31,6 @@ footer, header, nav {
 	width:1250px;
 	margin-right: auto;
 	margin-left: auto;
-	
 }
 /*清除浮动*/
   .clearfix:before,
@@ -74,18 +73,11 @@ footer, header, nav {
 	color: #000;
 	font-size: 12px;
 }
-/*.content1{
-	width: 1500px;
-	height:70px;
-	background-color: #FFF;
-	 padding-top: 35px;
-	}*/
 .edu{
 	color:#3A9E2C;
 	font-size: 24px;
 	display: inline-block;
-	margin:40px 20px 32px 0px;
-	
+	margin:40px 20px 32px 0px;	
 }
 .content1-1{
 	font-size: 24px; 
@@ -106,6 +98,57 @@ footer, header, nav {
 	padding-left: 20px;
 
 }
+#m-form #l-close{
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	width: 11px;
+	height: 11px;
+	background: url("../images/main.png") no-repeat -253px -95px;
+	cursor: pointer;
+}
+#form{
+	box-sizing: border-box;
+	position: fixed;
+	width: 388px;
+	height: 288px;
+	left: 50%;
+	top: 50%;
+	margin-left: -194px;
+	margin-top: -144px;
+	padding-left: 40px;
+	padding-top: 30px;
+	background-color: #fff;
+	filter: alpha(opacity=100);
+}
+#form h2{
+	margin-bottom: 22px;
+	font-size: 1.8em;
+	font-weight: normal;
+}
+#userName,#password{
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	width: 296px;
+	height: 46px;
+	color: #ccc;
+	font-size: 1.6em;
+	line-height: 46px;
+	font-family: microsoft yahei;
+	padding-left: 10px;
+	border: 1px solid #dfdfdf;
+	box-shadow: inset 1px 1px 2px;
+}
+#l-btn{
+	width: 295px;
+	height: 48px;
+	color: #fff;
+	border: none;
+	font-size: 1.6em;
+	cursor: pointer;
+	background: url("../images/main.png") no-repeat -1px -81px;
+}
+
 
 .content1-5,.content1-6,.content1-7{
 	font-size: 16px;
@@ -157,31 +200,6 @@ footer, header, nav {
 #buttons .on{
 	background: orangered;
 }
-
-/*.img {
-	width: 100%;
-}
-.img1{
-	
-	z-index: 2;
-	position: absolute;
-}
-.img2{
-	
-	z-index: 3;
-	position: absolute;
-}
-.img3{
-	
-	z-index: 4;
-	position: absolute;*/
-}
-/*.menu li{
-	
-	width:250px;
-	height:250px;
-	margin-left: 100px;
-}*/
 .menu{
 	width: 1348px;
 }
@@ -210,7 +228,6 @@ footer, header, nav {
 }
 /*内容4样式*/
 .content4{
-	/*width: 2000px;*/
 	height:250px;
 	margin-top: 70px;
 }
@@ -281,14 +298,8 @@ footer, header, nav {
 	width:980px;
 	margin-top:20px;
 	margin-left:50px;
-	/*margin: 26px auto;*/
 	height: 1220px;
 }
-/*.m-pd{
-	position: relative;
-	width: 100%;
-	height: 100%;
-}*/
 .content5-2 .m-card{
 	display: block;
 	position: absolute;
@@ -298,10 +309,72 @@ footer, header, nav {
 	box-shadow: 0 1px 0.5px #e6e6e6;
 	cursor: pointer;
 }
-/*.card{
-	z-index: 200;
+.content5-2 .m-card img{
+	margin: 0 auto;
+	width: 223px;
+	height: 123px;
 }
-*/
+.content5-2 .m-card:hover{
+	box-shadow: 0 1px 0.5px #666;
+	border-width: 1px\9;
+	border-style: solid\9;
+	border-color: #666\9;
+}
+.content5-2 .m-card:hover h4{
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding-left: 5px;
+	width: 210px;
+	height: 14px;
+	color: #333;
+	font-size: 1.2em;
+	line-height: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.content5-2 .m-card h4{
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding-left: 5px;
+	width: 210px;
+	height: 18px;
+	color: #333;
+	font-size: 0.8em;
+	line-height: 14px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.content5-2 .m-card span{
+	display: block;
+	margin: 6px;
+	font-size: 0.6em;
+	color: #999;
+}
+.content5-2 .m-card em{
+	display: block;
+	box-sizing: border-box;
+	width: 55px;
+	height: 18px;
+	font-size: 0.6em;
+	color: #999;
+	padding-left: 14px;
+	margin-left: 5px;
+	margin-bottom: 8px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	font-style: normal;
+	line-height: 16px;
+	text-align: center;
+	background: url("../images/main.png") no-repeat -278px -72px;
+}
+.content5-2 .m-card strong{
+	display: block;
+	margin-left: 5px;
+	font-size: 0.6em;
+	color: #ff3f00;
+}
 .content5-2 .hover{
 	display: none;
 	position: absolute;
@@ -311,6 +384,51 @@ footer, header, nav {
 	background-color: #fff;
 	box-shadow: 1px 1px 0.5px #c1c0c0,-1px -1px 0.5px #d3d1d2;
 	z-index: 600;
+}
+.content5-2 .hover div{
+	height: 150px;
+	margin-top: 20px;
+}
+.content5-2 .hover img{
+	display: block;
+	float: left;
+	margin-left: 20px;
+}
+.content5-2 .hover .p-title{
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	width: 200px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #333;
+	font-style: normal;
+}
+.content5-2 .hover em{
+	float: left;
+	color: #999;
+	margin-left: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.content5-2 .hover span{
+	float: left;
+	color: #999;
+	margin-left: 20px;
+	width: 40%;
+	height: 15px;
+}
+.content5-2 .hover .description{
+	box-sizing: border-box;
+	padding: 22px;
+	width: 480px;
+	height: auto;
+	color: #999;
+	font-size: 1em;
+	line-height: 20px;
+	text-overflow: ellipsis;
+	overflow:hidden;
+	background-color: #f8f8f8;
 }
 .exit{
 	/*position: absolute;*/
@@ -354,49 +472,6 @@ footer, header, nav {
 	color: #39a030;
 }
 
-.content5-2-1{
-	float:left;
-	width:220px;
-	height:230px;
-	margin-top:0px;
-	margin-right:20px;
-}
-.content5-2-1-1{
-	width:220px;
-	height:124px;
-	overflow:hidden;
-}
-.content5-2-1-2{
-	display:inline-block;
-	font-size:12px;
-	height:16px;
-	text-align:center;
-	
-	font-weight:normal;
-}
-.content5-2-1-3{
-	
-	font-weight:normal;
-	font-size:12px;
-}
-.content5-2-1-4{
-	
-	width:22px;
-	height:16px;
-	color:#999;
-	background:url("../images/people.png")  no-repeat;
-	font-size:12px;
-	padding:0 14px 0 16px;
-	text-height:16px;
-	box-shadow: 0 1px #f1f1f1;
-	border:1px solid #e6e6e6;
-
-}
-.content5-2-1-5{
-
-	color:#ff3f00;
-	font-size:12px;
-}
 /*内容5右边样式*/
 .content5-3{
 	float:right;
@@ -408,7 +483,6 @@ footer, header, nav {
 .content5-3-1{
 	width:232px;
 	height:38px;
-	
 	font-size:16px;
 	font-weight:normal;
 	padding-top:20px;
@@ -429,10 +503,8 @@ footer, header, nav {
 	background-repeat: no-repeat;
 	background-position-x: -190px;
 	cursor: pointer;
-
-	/*background-size: 100% 100%;*/
 }
-.g-pop{
+#m-form,.g-pop{
 	display: none;
 	position: fixed;   /*相对于屏幕定位*/
 	width: 100%;
@@ -483,13 +555,12 @@ footer, header, nav {
 	float:right;
 	margin:24px 60px 0 0;
 	width:232px;
-	height:720px;
+	height:770px;
 	border:1px solid #e6e6e6;
 }
 .content5-4-1{
 	width:232px;
 	height:38px;
-	
 	font-size:16px;
 	font-weight:normal;
 	padding-top:20px;
@@ -502,30 +573,47 @@ footer, header, nav {
 	width:232px;
 	height:80px;
 }
-.content5-4-2-1-1{
-	float:left;
-	padding-left:14px;
-	padding-top:14px;
-	width:48px;
-	height:48px;
+.content5-4 div{
+	position: relative;
+	height: 720px;
+	overflow: hidden; 
 }
-.content5-4-2-1-2{
-	float:right;
-	font-weight:normal;
-	width:150px;
-	height:18px;
-	font-size:14px;
-	margin-left:8px;
-	margin-top:8px;
-	overflow:hidden;
-	text-overflow: ellipsis;
-
+.content5-4 #t-list{
+	position: absolute;
 }
-.content5-4-2-1-3{
-
-	padding-left:16px;
+.content5-4 #t-list li{
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 224px;
+	height: 50px; 
+}
+.content5-4 #t-list img{
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+.content5-4 #t-list a{
+	display: block;
+	float: left;
+	margin-left: 12px;
+	width: 125px;
+	line-height: 20px;
+	color: #000;
+	overflow: hidden;
+	text-overflow: ellipsis; /*多余文本修减*/
+	white-space: nowrap;  /*规定段落文本不进行换行*/
+}
+.content5-4 #t-list span{
+	display: block;
+	float: left;
+	margin-left: 12px;
+	margin-top: 12px;
+	width: 60px;
+	height: 12px;
 	font-size:12px;
-	margin-left:18px;
-	
-	background:url("../images/people.png") no-repeat;
+	color: #999;
+	line-height: 12px;
+	text-indent: 1.3em; /*将段落的第一行缩进1.3em*/
+	background: url("../images/main.png") no-repeat -282px -73px;
 }

@@ -165,6 +165,28 @@ window.onload=function(){
 		}
 	}
 
+/***********************************登陆和关注*****************************************************************/
+	//关注按钮
+		function show(){
+			var cookies = getCookie(),
+				forms = document.getElementById('m-form');
+			if(cookies.loginSuc){
+				forms.style.display = 'none';
+				// follow(cookies);
+			}else{
+				forms.style.display = 'block';
+			}
+		}
+		// function follow(c){
+		// 	var flwed = document.getEle
+		// }
+	//点击关注事件
+	var flw = document.getElementsByClassName('content1-2')[0];
+
+
+	EventUtil.addHandler(flw, "click", show);   //添加打开登录框事件
+
+
 /***********************************获取课程数据***********************************************************/
 	var setCourse = {
 		url:'http://study.163.com/webDev/couresByCategory.htm',
@@ -399,6 +421,50 @@ window.onload=function(){
 		}
 	}
 	get(topCourse.url,'',topCourse.addElements);  //给右侧最热排行请求数据
+
+	//最热排行内容滚动
+	function upRank(){  //每隔5秒钟向上滑动70px
+		var ul = document.getElementById('t-list'),t=0;
+		var x = setInterval(function(){
+			t -= 70;
+			if(t <= -700){
+				backtop(ul,t);
+				t = 0;
+			}else{   //滑动10次后会退到1
+				rankUpdate(ul,t);
+			}
+		},5000);
+	}
+	upRank();  //启动滑动
+	//滑动方式
+	function rankUpdate(elem,t){
+		var step = 7/25*10; //每次滑动70px，分25步完成，每步用时20ms，滑动用时500ms
+		var x = 0;
+		function update(){
+			if(x >= -68){
+				x -= step;
+				elem.style.top = t + 70 + x + 'px';
+			}else{
+				clearInterval(updateRank);
+			}
+		}
+		var updateRank = setInterval(update,20); //每滑动微小一步用时20ms
+	}
+	//回退函数
+	function backtop(elem,t){
+		var step = 10;  //70px分10步来完成
+		var x = 0;
+		function back(){
+			if(x <= 700){
+				x += step;
+				elem.style.top = t + x + 'px';
+			}else{
+				clearInterval(interval);
+			}
+		}
+		var interval = setInterval(back,1);
+	}
+
 
 /************************************部分公用函数**********************************************************************/
 

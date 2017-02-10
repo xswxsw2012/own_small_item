@@ -7,6 +7,24 @@
 	<script type="text/javascript" src="js/e.js"/></script>
 </head>
 <body >
+	<!--登陆弹窗,提交表单-->
+	<div id="m-form">
+		<form action="http://study.163.com/webDev/login.htm" method="get" name="login" id="form">
+			<div id="l-close"></div>
+			<h2>登陆网易云课堂</h2>
+			<p>
+				<label for="userName">
+					<input type="text" name="userName" id="userName" placeholder="账号">
+				</label>
+			</p>
+			<p>
+				<label for="password">
+					<input type="password" name="password" id="password" placeholder="密码">
+				</label>
+			</p>
+			<button type="button" id="l-btn">登陆</button>
+		</form>
+	</div>
 	<!--视频弹窗-->
 	<div class="g-pop">
 		<div class="popvideo">
@@ -53,8 +71,7 @@
 		<li class="content2-2"><h3 class="content2-2-1">网易公开课</h3>
 				<p class="content2-2-2">推出国内外名校公开课，涉及广泛的学<br>科，名校老师认真讲解，深度剖析，网<br>易视频公开课频道搭建起强有力的网络<br>
 				视频教学平台。</p>
-				<div class="content2-3-3"><a href="http://open.163.com/">了解更多></a></div>
-			
+				<div class="content2-3-3"><a href="http://open.163.com/">了解更多></a></div>	
 		</li>
 
 		<li class="content2-3"><h3 class="content2-3-1">云课堂</h3>
@@ -68,8 +85,8 @@
 		
 		<li class="content2-4"><h3 class="content2-4-1">中国大学Mooc</h3>
 				<p class="content2-4-2">
-				推出国内外名校公开课，涉及广泛的学科<br>
-				，名校老师认真讲解，深度剖析，网<br>
+				推出国内外名校公开课，涉及广泛的学<br>
+				科，名校老师认真讲解，深度剖析，网<br>
 				易视频公开课频道搭建起强有力的网络<br>
 				视频教学平台。</p>
 				<div class="content2-4-3"><a href="http://www.icourse163.org/">了解更多></a></div>
@@ -89,10 +106,6 @@
 		<div class="content5-1-1" id="pc"><div class="content5-1-1-1">产品设计</div></div>
 		<div class="content5-1-2" id="pl"><p class="content5-1-1-2">编程语言</p></div>	
 	</div>
-	<!--<div class="content5-2">
-		<div class="content5-2-1"><img src="http://img1.ph.126.net/xhLuwCcmzhSW4hzQiaVY3A==/1966947137354248276.png" title="本期极客活动将邀请国内在 Windows Phone 7 平台有重要表现的嘉宾们，他们将于我们共同探讨 WP 7 手机的到来带来了什么样的革新和体验，并一起来看看他们又做了哪些创新。"></div>	
-	</div>-->
-
 	<!--课程信息展示-->
 	<div class="exit clearfix" >
 	<div class="content5-2">
@@ -121,48 +134,9 @@
 	
 	<div class="content5-4">
 		<h4 class="content5-4-1">最热排行</h4>
-		<ul id="t-list">
-
-			<!-- <li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img0.ph.126.net/DcL9flOAzUJVy1CWQkkA1w==/6631650506862123378.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >零基础轻松入门Java</p>
-				<span class="content5-4-2-1-3">4</span>
-			</li>
-			<li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img2.ph.126.net/tSu-I30B4x9u0Y7ip3P_3w==/3768668463279282944.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >全国计算机二级</p>
-				<span class="content5-4-2-1-3">20</span>
-			</li>
-			<li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img0.ph.126.net/KnECAFQ4eJmKCmLOPxllcg==/6631597730303915817.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >SPA接口之路</p>
-				<span class="content5-4-2-1-3">56</span>
-			</li>
-			<li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img0.ph.126.net/QYIVgC9iFORBXWNsE7aL5g==/6631731870722398050.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >PS教程/Photoshop</p>
-				<span class="content5-4-2-1-3">300</span>
-			</li>
-			<li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img2.ph.126.net/Oj5zJPi0lrJlSrlzpZpERQ==/6631487779141156727.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >CAD视频教程autoCAD2010</p>
-				<span class="content5-4-2-1-3">18</span>
-			</li>
-			<li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img0.ph.126.net/DmNJIjtrrje1HXWBSpM05A==/6631822030676030589.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >零基础到架构师</p>
-				<span class="content5-4-2-1-3">150</span>
-			</li><li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img1.ph.126.net/2LKErnJFDycXLQsRF_OWqQ==/6631632914675946340.jpg" alt="课程图片">
-				<p class="content5-4-2-1-2" >[独家]新媒体营业</p>
-				<span class="content5-4-2-1-3">88</span>
-			</li>
-			<li class="content5-4-2-1 clearfix">
-				<img class="content5-4-2-1-1" src="http://img2.ph.126.net/QmCxjpt2YkAjRFIMDEjD9w==/6631576839583036442.png" alt="课程图片">
-				<p class="content5-4-2-1-2" >《按键精灵安卓版》</p>
-				<span class="content5-4-2-1-3">94</span>
-			</li> -->
-		</ul>
+		<div>
+			<ul id="t-list"></ul>
+		</div>
 	</div>
 	
 </div>
