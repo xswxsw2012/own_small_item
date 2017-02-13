@@ -4,6 +4,7 @@
 	<title>网易产品教育</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<script type="text/javascript" src="js/md5.min.js"/></script>
 	<script type="text/javascript" src="js/e.js"/></script>
 </head>
 <body >
@@ -22,7 +23,7 @@
 					<input type="password" name="password" id="password" placeholder="密码">
 				</label>
 			</p>
-			<button type="button" id="l-btn">登陆</button>
+			<button type="button" id="l-btn"></button>
 		</form>
 	</div>
 	<!--视频弹窗-->
@@ -42,12 +43,15 @@
 		</div>
 	</div>
 	<div class="gid clearfix">
+		<div class="gid-div">
 		<p class="edu">EDU</p>
 		<p class="content1-1">网易教育产业部</p>
 		<span class="content1-2">+关注</span>
+		<span class="f-fed">已关注 | <a href="">取消</a></span>
 		<span class="content1-4">粉丝45</span>
-		<ul>
-			<li><a href="#" class="content1-5">中国大学mooc<</a></li>
+		</div>
+		<ul class="gid-ul">
+			<li><a href="#" class="content1-5">中国大学mooc</a></li>
 			<li><a href="#" class="content1-6">云课堂</a></li>
 			<li><a href="#" class="content1-7">网易公开课</a></li>
 		</ul>
@@ -71,7 +75,7 @@
 		<li class="content2-2"><h3 class="content2-2-1">网易公开课</h3>
 				<p class="content2-2-2">推出国内外名校公开课，涉及广泛的学<br>科，名校老师认真讲解，深度剖析，网<br>易视频公开课频道搭建起强有力的网络<br>
 				视频教学平台。</p>
-				<div class="content2-3-3"><a href="http://open.163.com/">了解更多></a></div>	
+				<div class="content2-3-3"><a href="http://open.163.com/" style="color: #1EA556">了解更多></a></div>	
 		</li>
 
 		<li class="content2-3"><h3 class="content2-3-1">云课堂</h3>
@@ -80,7 +84,7 @@
 				向学习者提供海量免费、优质课程，创<br>
 				新的个性化学习体验，自由开放的交流<br>
 				互动环境。</p>
-				<div class="content2-3-3"><a href="http://study.163.com/">了解更多></a></div>
+				<div class="content2-3-3"><a href="http://study.163.com/" style="color: #1EA556">了解更多></a></div>
 		</li>
 		
 		<li class="content2-4"><h3 class="content2-4-1">中国大学Mooc</h3>
@@ -89,7 +93,7 @@
 				科，名校老师认真讲解，深度剖析，网<br>
 				易视频公开课频道搭建起强有力的网络<br>
 				视频教学平台。</p>
-				<div class="content2-4-3"><a href="http://www.icourse163.org/">了解更多></a></div>
+				<div class="content2-4-3"><a href="http://www.icourse163.org/" style="color: #1EA556">了解更多></a></div>
 		</li>
 	</ul>
 </div>
@@ -103,8 +107,8 @@
 <!--内容5，产品设计编程语言-->
 <div class="content5 clearfix">
 	<div class="content5-1 clearfix">
-		<div class="content5-1-1" id="pc"><div class="content5-1-1-1">产品设计</div></div>
-		<div class="content5-1-2" id="pl"><p class="content5-1-1-2">编程语言</p></div>	
+		<div class="content5-1-1" id="pc"><p class="content5-1-1-1">产品设计</p></div>
+		<div class="content5-1-2" id="pl"><p class="content5-1-1-2">编程语言</p></div>
 	</div>
 	<!--课程信息展示-->
 	<div class="exit clearfix" >
@@ -135,7 +139,7 @@
 	<div class="content5-4">
 		<h4 class="content5-4-1">最热排行</h4>
 		<div>
-			<ul id="t-list"></ul>
+			<ul id="t-list" style="margin-left: -35px;"></ul>
 		</div>
 	</div>
 	

@@ -8,8 +8,6 @@ window.onload=function(){
 	var interval=3000;
 	var timer;
 
-
-
 	function showButton(){
 		for(var i=0;i<buttons.length;i++){
 			if(buttons[i].className=='on'){
@@ -167,24 +165,78 @@ window.onload=function(){
 
 /***********************************登陆和关注*****************************************************************/
 	//关注按钮
-		function show(){
-			var cookies = getCookie(),
+		function show(){    //显示弹窗
+			var loginSuc = getCookie('loginSuc'),
+				followSuc = getCookie('followSuc'),
 				forms = document.getElementById('m-form');
-			if(cookies.loginSuc){
+			if(loginSuc){
 				forms.style.display = 'none';
-				// follow(cookies);
+				follow(followSuc);
 			}else{
 				forms.style.display = 'block';
 			}
 		}
-		// function follow(c){
-		// 	var flwed = document.getEle
-		// }
+		function follow(followSuc){          //根据cookie值切换关注和已关注显示
+			var flwed = document.getElementsByClassName('content1-2')[0],
+				flw = document.getElementsByClassName('f-fed')[0];
+			if (followSuc) {
+				flw.style.display = 'none';
+				flwed.style.display = 'inline-block';
+			}else{
+				flw.style.display = 'inline-block';
+				flwed.style.display = 'none';
+			}
+		}
+		// var cookie = getCookie('followSuc');
+		// follow(cookie);
 	//点击关注事件
 	var flw = document.getElementsByClassName('content1-2')[0];
-
-
 	EventUtil.addHandler(flw, "click", show);   //添加打开登录框事件
+
+	//关闭登陆按钮
+	var closeF = document.getElementById('l-close'),
+		handler_lclose = function(event){
+			var forms = document.getElementById('m-form');
+			forms.style.display = 'none';
+		};
+
+	EventUtil.addHandler(closeF, "click", handler_lclose);  //添加关闭登陆按钮事件
+
+	//验证登陆
+	function verify(){
+		var forms = document.login,   //根据form中的name在取节点
+			username = forms.userName.value,
+			pswd = forms.password.value;
+		username = md5(username);
+		pswd = md5(pswd);
+		var data = {'userName':username,'password':pswd};
+		url = 'http://study.163.com/webDev/login.htm';
+		get(url,data,login);
+	}
+	function login(value){
+		if(value == 1){
+			setCookie('loginSuc','true',15);  //设置登陆成功的cookie
+			get('http://study.163.com/webDev/attention.htm','',function(a){
+				if(a == 1){
+					var fbtn = document.getElementsByClassName('content1-2')[0],
+						ffed = document.getElementsByClassName('f-fed')[0];
+						mform = document.getElementById('m-form');
+					setCookie('followSuc','true',15);  //设置关注成功的cookie
+					mform.style.display = 'none';
+					fbtn.style.display = 'none';
+					ffed.style.display = 'inline-block';
+				}
+			});
+			show();
+		}else{
+			alert('Login failed,Please cheack the username and password!');
+		}
+	}
+
+	//登陆按钮
+	var l_btn = document.getElementById('l-btn');
+	EventUtil.addHandler(l_btn, "click", verify);  //添加登陆按钮点击事件
+
 
 
 /***********************************获取课程数据***********************************************************/
@@ -327,12 +379,14 @@ window.onload=function(){
 		t_pl = document.getElementById('pl'),
 		pc = document.getElementById("product-design"),
 		pl = document.getElementById("programing-language"),
-		handler3 = function(event){  //点击产品执行的操作
+		handler3 = function(event){  //点击产品设计执行的操作
 			removeClassName(t_pl,'active');
 			addClassName(t_pc,'active');
 			pc.style.display = 'block';
 			pl.style.display = 'none';
-			// pc.innerHTML = '';
+			t_pc.style.backgroundColor = '#1EA956';
+			t_pl.style.backgroundColor = '#F3F3F3';
+			pc.innerHTML = '';
 			get(setCourse.url,parameters(),setCourse.addElements);
 		},
 		handler4 = function(event){  //点击编程语言执行的操作
@@ -340,6 +394,8 @@ window.onload=function(){
 			addClassName(t_pl,'active');
 			pc.style.display = 'none';
 			pl.style.display = 'block';
+			t_pl.style.backgroundColor = '#1EA956';
+			t_pc.style.backgroundColor = '#F3F3F3';
 			pl.innerHTML = '';
 			get(setCourse.url,parameters(),setCourse.addElements);
 		};

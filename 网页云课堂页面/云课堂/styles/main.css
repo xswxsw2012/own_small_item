@@ -1,4 +1,4 @@
-/*初始化网页*/
+初始化网页*/
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +10,9 @@ html {
 body {
 	height: 100%;
 	background-color: #f8f8f8;
+}
+dd{
+	-webkit-margin-start: 0px;  /*清除dd标签默认的margin-left属性*/
 }
 a {
 	text-decoration: none;
@@ -73,6 +76,18 @@ footer, header, nav {
 	color: #000;
 	font-size: 12px;
 }
+.gid-div{
+	width: 500px;
+	height: 100px;
+	margin-top: 0;
+	margin-bottom: 0; 
+	float: left;
+}
+.gid-ul{
+	float: right;
+	width: 600px;
+	height: 60px;
+}
 .edu{
 	color:#3A9E2C;
 	font-size: 24px;
@@ -81,18 +96,23 @@ footer, header, nav {
 }
 .content1-1{
 	font-size: 24px; 
-	
 	display: inline-block;
 }
 .content1-2{
-	background-color: #1EA556;
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	border-radius: 2px;
 	margin-left:20px;
 	margin-right: 10px; 
+	color: #fff;
+	background-color: #1EA556;
 }
-/*.content1-3{
-	font-size: 12px; 
-	
-}*/
+.f-fed{
+	margin-left:20px;
+	margin-right: 10px; 
+	display: none;
+}
 .content1-4{
 	font-size: 12px; 
 	padding-left: 20px;
@@ -146,15 +166,14 @@ footer, header, nav {
 	border: none;
 	font-size: 1.6em;
 	cursor: pointer;
-	background: url("../images/main.png") no-repeat -1px -81px;
+	background: url("../images/main.png") no-repeat 1px 1px;
 }
-
 
 .content1-5,.content1-6,.content1-7{
 	font-size: 16px;
 	color: #000;
 	float:right;
-	margin: -40px 30px 20px 50px;
+	margin: 30px 10px 0px 20px;
 }
 
 .content1-5:hover,.content1-6:hover,.content1-7:hover{color:#1EA956;}
@@ -201,7 +220,7 @@ footer, header, nav {
 	background: orangered;
 }
 .menu{
-	width: 1348px;
+	width: auto;
 }
 .content2-2,.content2-3,.content2-4{
 	float: left;
@@ -229,6 +248,7 @@ footer, header, nav {
 /*内容4样式*/
 .content4{
 	height:250px;
+	width: auto;
 	margin-top: 70px;
 }
 .content4-1,.content4-2,.content4-3,.content4-4,.content4-5{
@@ -248,12 +268,14 @@ footer, header, nav {
 .content5-1-1-1,.content5-1-1-2{
 	font-size: 16px;
 	text-align: center;
-	padding-top: 12px;
+	cursor: pointer;
+	/*padding-top: 12px;*/
 }
 .content5-1-2{
 	float: left; 
 	width: 200px; 
 	height: 50px;
+	text-align: center;
 	 background-color:#F3F3F3;
 	}
 /*底部样式*/
@@ -555,12 +577,11 @@ footer, header, nav {
 	float:right;
 	margin:24px 60px 0 0;
 	width:232px;
-	height:770px;
+	height:740px;
 	border:1px solid #e6e6e6;
 }
 .content5-4-1{
 	width:232px;
-	height:38px;
 	font-size:16px;
 	font-weight:normal;
 	padding-top:20px;
@@ -575,7 +596,7 @@ footer, header, nav {
 }
 .content5-4 div{
 	position: relative;
-	height: 720px;
+	height: 640px;
 	overflow: hidden; 
 }
 .content5-4 #t-list{
@@ -588,6 +609,9 @@ footer, header, nav {
 	width: 224px;
 	height: 50px; 
 }
+.content5-4 #t-list li:first-child{
+	margin-top: 0px;
+}
 .content5-4 #t-list img{
 	float: left;
 	width: 50px;
@@ -598,11 +622,13 @@ footer, header, nav {
 	float: left;
 	margin-left: 12px;
 	width: 125px;
+	height: 20px;
 	line-height: 20px;
+	font-size: 12px;
 	color: #000;
 	overflow: hidden;
-	text-overflow: ellipsis; /*多余文本修减*/
-	white-space: nowrap;  /*规定段落文本不进行换行*/
+	text-overflow: ellipsis; 多余文本修减
+	/*white-space: nowrap;  /*规定段落文本不进行换行*/
 }
 .content5-4 #t-list span{
 	display: block;
