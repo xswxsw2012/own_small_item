@@ -1,0 +1,214 @@
+<div id="depositView" class="bin-page">
+ <style>
+ /*	#depositView .cows{
+ 		height: 2.32rem;
+ 		width: 30%;
+    float: left;
+ 		background-color: #ffffff;
+    line-height: 2.2rem;
+    border: 0.4px solid #dddddd;
+ 	}*/
+
+  #depositView .cows{
+    height: 2.27rem;
+    width: 30%;
+    float: left;
+    background-color: #ffffff;
+    line-height: 2.2rem;
+    border-top: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+
+
+   #depositView .changebot{
+    height: 2.27rem;
+    width: 30%;
+    float: left;
+    background-color: #ffffff;
+    line-height: 2.2rem;
+    border: 1px solid #458c45;
+
+ }
+
+  #depositView #mask{
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 2;
+    background-color: #dddddd;
+    position: absolute;
+    top: 0rem;
+    bottom: 0rem;
+    display: none;
+  }
+
+  #depositView #writemoney{
+    margin:auto;
+    width: 11rem;
+    height: 4rem;
+    font-size: 0.8rem;
+    background-color: #90e2d2;
+     margin-top: 8rem;
+
+  }
+
+  #depositView #money{
+    width: 4rem;
+    outline: none;
+    border:none;
+    height: 1rem;
+
+  }
+
+
+
+  #depositView .chosecow{
+    background-image: url("demoimg/homeimg/chose.png");
+    background-position:3.5rem 1.3rem;
+    background-repeat: no-repeat;
+    background-size:30%;
+  }
+
+  #depositView #deposit{
+    overflow-x: hidden;
+  }
+
+  
+  #depositView #table{
+    height: 4.55rem;
+    width: 100%;
+    text-align: center;
+    margin-left: 54%;
+    transform: translateX(-50%);
+    font-size:0.7rem; 
+   color: #949494;
+   margin-top: 0.7rem;
+
+   }
+
+
+ 	#depositView #pic1{
+ 		height:1.575rem; 
+ 		width:2.85rem;
+ 		float: left;
+ 		margin-top: 0.5rem;
+ 		margin-left: 0.65rem;
+
+ 	}
+
+ 	#depositView #pic2{
+ 		height:1.575rem; 
+ 		width:2.85rem;
+ 		float: left;
+ 		margin-top: 0.5rem;
+ 		margin-left: 0.65rem
+ 	}
+
+ 	#depositView #btn{
+ 		background-color:#60c9a3;
+ 		width: 14.8rem;
+ 		height: 2rem;
+ 		position: absolute;
+ 		bottom: 0.8rem;
+ 		margin-left: 50%;
+ 		transform: translateX(-50%);
+ 		border-radius: 0.2rem;
+ 		text-align: center;
+ 	}
+
+ 	#depositView #btn span {
+ 		color:#ffffff;
+ 		font-size: 0.7rem;
+ 		vertical-align: -webkit-baseline-middle;
+ 	}
+
+ 	#depositView #choosemethod{
+ 		color:#999999;
+ 		font-size:0.7rem;
+ 		position: absolute;
+ 		top:6.3rem;
+ 		left: 0.75rem;
+ 	}
+    #depositView #method{
+ 	margin-top: 2.4rem;
+ 	background-color: white;
+ 	position: relative;
+     height: 5rem;
+    }
+
+
+   
+    #depositView #chooseimg{
+        width: 1rem;
+        height: 1rem;
+        float: right;
+        margin-top: 1.5rem
+    }
+
+     #depositView .mm{
+      	width: 1.05rem;
+      	height: 1.05rem;
+      	float: right; 
+      	margin-right: 1rem;
+        margin-top: -1.8rem;
+      }
+
+    /*#depositView #a{
+       border-right: none;
+    } 
+    
+      #depositView #c{
+       border-left: none;
+    } 
+      #depositView #d{
+       border-right: none;
+       border-top: none;
+    } 
+     #depositView #e{
+       border-top: none;
+    } 
+
+     #depositView #inputmoney{
+      border-top: none;
+    border-left: none;
+     }*/
+
+
+
+
+ </style>
+
+ <div id="naviBar" class="bin-page-navi-bar" naviTitle="text:钱包充值"></div>
+ <div class="bin-page-content">
+ <div id="deposit">
+	  <div id="table">
+		    <div class="cows" >10元</div>
+        <div class="cows" >30元</div>
+        <div class="cows" >50元</div>
+		    <div class="cows" >100元</div>
+		    <div class="cows" >200元</div>
+		    <div class="cows" id="inputmoney">其他金额</div>
+	 </div>
+ 
+    <span id="choosemethod">选择充值方式</span>
+
+   <div id="method">
+      <div id="zfb" style="height: 2.52rem"><img id="pic1" src="demoimg/homeimg/zhi.png"/><div style="border-bottom:0.02rem solid #dddddd;margin-left: 4rem;height: 2.5rem" ><span style="color: #666666;display: block;line-height: 2rem;margin-top: 0.5rem;margin-left:0.35rem;font-size: 0.7rem">支付宝</span><span  style="color: #999999;font-size: 0.6rem;display: block;margin-left:0.35rem;line-height: 0rem">支付宝，知付托！</span></div> <img class="mm"  src="demoimg/homeimg/choose1.png"/></div>
+      <div id="wechat" style="height: 2.52rem"><img id="pic2" src="demoimg/homeimg/weixin.png"/><div style="height: 2.5rem"><span style="color: #666666;display: block;line-height: 2rem;margin-left:4.35rem;font-size: 0.7rem">微信支付</span><span style="line-height:0rem;color: #999999;font-size: 0.6rem;display: block;margin-left:4.35rem">安全可靠，后顾无忧！</span></div>
+   <img class="mm" src="demoimg/homeimg/choose.png"/>
+      </div>
+   </div>
+   <div id="btn">
+   	  <span>立即充值</span>
+   </div>
+
+ </div>
+   <div id="mask"><div id="writemoney"><span style="line-height: 2rem;margin-left: 1rem">请输入金额：<input id="money"></input></span>
+                   <div id="check" style="width:2rem;height: 1rem;background-color: yellow;position: absolute;top:10.4rem;left: 5rem;font-size:0.7rem;text-align: center;">确认</div>      <div id="no" style="width: 2rem;height: 1rem;background-color: yellow;position: absolute;top:10.4rem;right: 4.5rem;font-size:0.7rem;text-align: center;">取消</div>
+                  </div>
+   </div>
+
+ </div>
+</div>

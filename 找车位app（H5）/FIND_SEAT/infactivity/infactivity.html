@@ -1,0 +1,178 @@
+
+<div id="infactView" class="bin-page">
+<style>
+	#infactView .header{
+		position: relative;
+		height: 2.2rem;
+		width: 100%;
+		background-color: #019a66;
+	}
+	#infactView .topprev{
+		position: absolute;
+		width: 0.5rem;
+		height: 1rem;
+		left: 5%;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url("demoimg/newimg/back.png");
+		background-size: cover;
+	}
+	#infactView .header-content{
+		height: 1.4rem;
+		width: 8rem;
+		border: solid 1px #fff;
+		border-radius: 0.2rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);	
+	}
+	#infactView .header-item{
+		margin: 0 auto;
+		text-align: center;
+		font-size: 0.7rem;
+		width: 50%;
+		height: 1.4rem;
+		float: left;	
+		line-height: 1.4rem;
+		box-sizing: border-box;
+		border-right: 1px solid #fff;	 
+	}
+	#infactView .header-item-active{
+		background-color: #fff;
+		color: #019a66;
+	}
+	#infactView .header-item-deactive{
+		background-color:transparent; 
+		color: #fff;
+	}
+	#infactView .header-clear{
+		position: absolute;
+		top: 50%;
+		right: 5%;
+		transform: translateY(-50%); 
+		font-size: 0.7rem;
+		color: #fff;
+	}
+	#infactView .activity{       /**/
+		width: 14.5rem;
+		height: 15rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5%;
+		background-color: #fff;
+	}
+	#infactView .coupon{
+		height: 13rem;
+		width: 13.5rem;
+		margin-left: auto;
+		margin-right: auto;  
+	}
+	#infactView .title{
+		font-size: 0.8rem;
+		height: 2rem;
+		line-height: 2rem;
+	}
+	#infactView .coupon>img{
+		height: 7.75rem;
+		width: 13.5rem;
+	}
+	#infactView .note{
+		font-size: 0.7rem;
+		height: 3rem;
+		vertical-align: middle;
+		display: table-cell;
+		color: #b6b6b6;
+	}
+	#infactView .notice{
+		height: 2rem;
+		width: 13.5rem;
+		margin: 0 auto;
+		border-top: 1px solid #eee;
+	}
+	#infactView .notice-text{
+		line-height: 2rem;
+		font-size: 0.7rem;
+	}
+	#infactView .right-icon{
+		display: inline-block;
+		width: 0.4rem;
+		height: 0.7rem;
+		float: right;
+		margin-top:0.65rem;
+		
+	}
+	#infactView .right-icon{
+		background-image: url("demoimg/newimg/view_icon.png");
+		background-size: cover;
+	}
+	#infactView .infor-item{
+		height: 3.3rem;
+		width:100%;
+		background-color: #fff;
+		border-bottom: 1px solid #eee;
+	}
+	#infactView .infor-item-title{
+		height: 2rem;
+		width: 15rem;
+		line-height: 2rem;
+		margin: 0 auto;
+	}
+	#infactView .title-name{
+		font-size: 0.75rem;
+	}
+	#infactView .title-date{
+		display: inline-block;
+		font-size: 0.45rem;
+		float: right;
+		color: #999999;
+	}
+	#infactView .summary{
+		font-size: 0.6rem;
+		width: 15rem;
+		height: 1.3rem;
+		margin: 0 auto;
+		color: #b6b6b6;
+	}
+</style>
+
+<script type="text/x-underscore-template" id="itemTem">
+	<div class="infor-item">
+		<div class="infor-item-title">
+			<span class="title-name"><%=title%></span>
+			<span class="title-date"><%=date%></span>
+		</div>
+		<div class="summary"><%=summary%></div>
+	</div>
+</script>
+<script type="text/x-underscore-template" id="couponTem">
+	<div class="coupon">
+					<span class="title"><%=title%></span>
+					<img src=<%=image%>>
+					<span class="note"><%=summary%></span>
+				</div>
+				<div class="notice">
+					<span class="notice-text">查看全文</span>
+					<span class="right-icon"><i></i></span>
+				</div>
+</script>
+	<!-- <div class="bin-page-navi-bar">
+		
+	</div> -->
+		
+	<div class="bin-page-content" id="intab-View">
+		<div class="header">
+			<div class="topprev"></div>
+			<div id="tabitem" class="header-content">
+				<div id="1" class="header-item" >资讯</div>
+				<div id="2" class="header-item" style="border-right: none">活动</div>
+			</div>
+			<div class="header-clear">清空</div>
+		</div>	
+		<div id="swipeitem" style="height: 80%">
+			<div class="information" id="information" style="height: 100%"></div>
+			<div id="actDiv" style="height: 100%"><div class="activity" id="couponred" ></div></div>
+		</div>
+		
+	</div>
+</div>

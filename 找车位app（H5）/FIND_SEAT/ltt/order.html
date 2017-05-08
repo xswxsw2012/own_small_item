@@ -1,0 +1,127 @@
+<div id="orderView" class="bin-page">
+
+<style >
+
+    #orderView {
+    	background-color: #f0f0f0;
+    	font-size: 0.65rem;
+    }
+
+	#orderView #ordering,#work{
+         width: 100%;
+         height:12.65rem;
+         margin-top: 0.4rem;
+         background-color: #ffffff;
+         position: relative;
+        overflow: hidden;
+         /*border-image: url("demoimg/orderimg/bottom_bar.png") 27 round stretch;*/
+	}
+  #orderView #listView{
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+  }
+
+	#orderView #code{
+		height: 2.25rem;
+		width: 100%;
+		border-bottom:0.05rem solid #dddddd;
+
+	}
+
+	#orderView #number,#stoptime,#price,#preprice{
+		height: 2rem;
+		width: 100%;
+		position: relative;
+    border-bottom:0.05rem solid #dddddd;
+		
+	}
+
+   #orderView #number,#stoptime,#price{
+   	 left: 0.6rem;
+   }
+
+	#orderView .leftline{
+		display: inline-block;
+		position: absolute;
+		margin-top:0.6rem;
+	}
+ 
+  #orderView .rightline{
+		color:#323232;
+		right:1.24rem;
+		position:absolute;
+		display:inline-block;
+		margin-top:0.6rem;
+	}
+ 
+  #orderView #timeimg{
+  	   background-image: url("demoimg/orderimg/clock.png");
+  	   /*background-image: url("demoimg/orderimg/write.png");*/
+  	   background-size: 100% 100%;
+  	   width:0.85rem;
+  	   height: 0.85rem;
+  	   display: inline-block;
+  	   margin-top: 0.6rem;
+       margin-left: -1rem;
+       position: absolute;
+  }
+
+  #orderView #timein,#currentTime{
+   font-size: 0.85rem;
+   display: inline-block;
+   color: #dd8c07;
+   padding-left: 0.3rem;
+   margin-top: -0rem;
+  }
+
+  #orderView #bottom_bar{
+  	background-image: url("demoimg/orderimg/bottom_bar.png");
+  	background-size: 100% 100%;
+  	height: 0.3rem;
+  	margin-top: -1rem;
+  }
+
+  #orderView #timecount{
+   line-height: 2rem;
+   /*text-align: center;*/
+  }
+
+
+  #orderView #commentimg{
+    background-image: url("demoimg/orderimg/Write.png");
+       background-size: 100% 100%;
+       width:0.85rem;
+       height: 0.85rem;
+       display: inline-block;
+       margin-top: 0.6rem;
+       margin-left: -1rem;
+       position: absolute;
+  }
+</style>
+
+<script type="text/x-underscore-template" id="template-item">
+<div id="ordering">
+	<div id="code"><p class="leftline" style="left:0.65rem;font-size: 0.65rem">订单编号 <%=code%></p> <p class="rightline" id="cancel" style="right: 0.65rem;color:#ed4b00"><%=finsh%></p></div>
+	<div id="number"><p class="leftline" ><%=number%></p> <p class="rightline" id="time"><%=pretime%></p></div>
+	<div id="stoptime"><p class="leftline" >停车时长(小时)</p>   <p  class="rightline" id="timeval"><%=time%></p></div>
+	<div id="price"><p class="leftline" >价格总计(元)</p>    <p class="rightline" id="priceval"><%=price%></p></div>
+	<div id="preprice"><p class="leftline" style="left: 0.65rem">预付价格(元)</p> <p class="rightline" id="priceval" style="right: 0.65rem;color: #323232"><%=preprice%></p></div>
+    <div id="timecount" style="padding-left: 4.2rem"><div id="timeimg"></div><p id="timein">预约倒计时</p><p id="currentTime"><%=currentTime%></p></div>
+    <div id="bottom_bar"></div>
+</div>
+
+</script>
+
+
+
+<div id="naviBar" class="bin-page-navi-bar" naviTitle="text:订单" style="color: #fcfffc" naviLeft="hide:false"></div>
+<div class="bin-page-content">
+   <div id="listView" class="bin-list-view bin-lazyload-container">
+
+   </div>
+
+</div>
+</div>

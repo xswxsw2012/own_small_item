@@ -1,0 +1,89 @@
+.AlertView
+{
+	pointer-events:auto;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 10000rem;
+	overflow: hidden;
+	text-align: center;
+}
+
+#alertView .AlertView-content-block
+{
+	position: absolute;
+	width:12rem;
+	height:auto;
+	left: 50%; 
+	margin-left: -6rem;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+#alertView .AlertView-title
+{
+	width:100%;
+	height:auto;
+	font-size: 0.9rem;
+    line-height: 1.0rem;
+	text-align: center;
+	word-break:break-all;
+	padding: 0.6rem 0.35rem 0.6rem 0.35rem;
+	box-sizing : border-box;
+	background-color: rgba(230, 230, 230, 1.0);
+}
+
+#alertView .AlertView-message
+{
+	width:100%;
+	height:auto;
+	font-size:0.8rem;
+	line-height: 0.9rem;
+	text-align: center;
+	word-break:break-all;
+	padding: 1rem 0.8rem 1rem 0.8rem;
+	box-sizing : border-box;
+	background-color: white;
+    border-bottom: solid 1px rgba(200, 200, 200, 1.0); 
+}
+
+#alertView .AlertView-button
+{
+	width:100%;
+	height:2rem;
+	font-size: 0.8rem;
+	line-height:2rem; 
+	background-color: white;
+}
+
+#alertView .AlertView-wrap-block
+{
+	position: relative;
+	width:100%;
+	height:2rem;
+	font-size: 0rem;
+	line-height:2rem; 
+	background-color: white;
+	vertical-align: top;
+}
+
+#alertView .AlertView-wrap-button
+{
+	width:50%;
+	height:2rem;
+	font-size: 0.8rem;
+	line-height:2rem; 
+	background-color: white;
+	display: inline-block;
+}	
+
+#alertView .AlertView-v-line
+{
+	height:100%;
+	width: 1px;
+	position:absolute;
+	left:50%;
+	top: 0rem;
+	background-color: rgba(200, 200, 200, 1.0);
+}

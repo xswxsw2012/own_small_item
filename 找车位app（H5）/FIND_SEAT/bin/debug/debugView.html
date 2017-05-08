@@ -1,0 +1,66 @@
+<div id="debugView" class="bin-page">
+	<style>
+		#debugView .DebugView-debug-infos 
+		{
+			width:100%;
+			height:100%;
+			font-size: 0.5rem;
+			line-height: 0.6rem;
+			margin: 0rem;
+			border: none;
+			padding:0px;
+		}
+
+		#debugView .DebugView-debug-options
+		{
+			position: absolute;
+			bottom:0rem;
+			width:100%;
+			height:2rem;
+			background-color: rgb(200, 200,200);
+		}
+
+		#debugView .DebugView-debug-floating
+		{
+			position: absolute;
+			left: 0.5rem;
+			top:0.5rem;
+			width: 2.5rem;
+			height: 1rem;
+			font-size: 0.4rem;
+			line-height: 1rem;
+			background-color: gray;
+			text-align: center;
+		}
+
+		#debugView .DebugView-clear-infos
+		{
+			position: absolute;
+			left: 3.5rem;
+			top:0.5rem;
+			width: 2.5rem;
+			height: 1rem;
+			font-size: 0.4rem;
+			line-height: 1rem;
+			background-color: gray;
+			text-align: center;
+		}
+
+		#debugView .DebugView-debug-content
+		{
+			position: absolute;
+			top:2.2rem;
+			width: 100%;
+			bottom: 2rem;
+		}
+	</style>
+
+    <div class="bin-page-content">
+    	<div id="debugContent" class="DebugView-debug-content">
+    	</div>
+    	<div id="debugOptions" class="DebugView-debug-options">
+    		<div id="debugFloating" class="DebugView-debug-floating"></div>
+    		<div id="clearDebugInfos" class="DebugView-clear-infos">清空</div>
+    	</div>
+    </div>
+</div>

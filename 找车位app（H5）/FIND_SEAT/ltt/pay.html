@@ -1,0 +1,179 @@
+<div id="payView" class="bin-page">
+	<style>
+		#payView #ordering{
+         width: 100%;
+         height:10.425rem;
+        /* margin-top: 0.4rem;*/
+         background-color: #ffffff;
+         position: relative;
+         overflow: hidden;
+         /*color:#dddddd;*/
+	    }
+
+
+        #payView {
+    	background-color: #f0f0f0;
+    	font-size: 0.65rem;
+    }
+		#payView #code{
+			height: 2.25rem;
+			width: 100%;
+			border-bottom:0.05rem solid #dddddd;
+
+		}
+
+		#payView #number,#stoptime,#price,#preprice{
+			height: 2rem;
+			width: 100%;
+			position: relative;
+	    border-bottom:0.05rem solid #dddddd;
+			
+		}
+
+	   #payView #number,#stoptime,#price{
+	   	 left: 0.6rem;
+	   }
+
+		#payView .leftline{
+			display: inline-block;
+			position: absolute;
+			margin-top:0.6rem;
+			color:#696969;
+		}
+	 
+	  #payView .rightline{
+			color:#696969;
+			right:1.24rem;
+			position:absolute;
+			display:inline-block;
+			margin-top:0.6rem;
+		}
+
+		#payView #bottom_bar{
+		  	background-image: url("demoimg/orderimg/bottom_bar.png");
+		  	background-size: 100% 100%;
+		  	height: 0.3rem;
+		  	margin-top: -0.3rem;
+  }
+       #payView #method{
+       	background-color: #ffffff;
+       	height: 7.5rem;
+       	position: relative;
+       	margin-top:2.975rem;
+       }
+
+       #payView #method > div {
+       	 height: 2.5rem;
+       }
+
+       #payView #pic1{
+       	width: 2.92rem;
+       	height: 1.65rem;
+       	float: left;
+       	margin-left: 0.625rem;
+       	margin-top: 0.5rem;
+       }
+
+        #payView #wallet > div{
+        height: 2.3rem;
+        margin-left: 3.95rem;
+        padding-top: 0.4rem;
+        margin-top: -1.45rem;
+
+        }
+
+        #payView #pic2{
+       	width: 2.92rem;
+       	height: 1.65rem;
+       	float: left;
+       	margin-left: 0.625rem;
+       	
+       }
+
+        #payView #zfb > div{
+         height: 2.3rem;
+         margin-left: 3.95rem;
+         margin-top:0.55rem;
+
+        }
+        
+        #payView #pic3{
+       	width: 2.92rem;
+       	height: 1.65rem;
+       	float: left;
+       	margin-left: 0.625rem;
+       }
+
+       #payView #wechat >div{
+       	 height: 2.3rem;
+       	 margin-left: 3.95rem;
+        
+       }
+
+      #payView .choose{
+      	width: 1.05rem;
+      	height: 1.05rem;
+      	float: right; 
+      	margin-top: -2rem;
+      	margin-right: 0.625rem;
+      }
+
+      #payView #choosemethod{
+      	font-size:0.75rem;
+      	color: #9b9b9b;
+      	left: 0.7rem;
+      	position: absolute;
+      	padding-top: 0.3rem;
+      }
+
+      #payView #pay{
+        background-color:#60c9a3;
+        width: 14.775rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+        color:white;
+        bottom: 0.34rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border:none;
+      }
+
+	</style>
+
+
+<div id="naviBar" class="bin-page-navi-bar" naviTitle="text:预约付款"></div>
+<div class="bin-page-content">
+
+   <div id="ordering">
+	<div id="code"><p class="leftline" style="left:0.65rem;font-size: 0.65rem">订单编号:TC123456</p> </div>
+	<div id="number"><p class="leftline" >川E 45678</p> <p class="rightline" id="time">预约时间:2015-10-22 20:30</p></div>
+	<div id="stoptime"><p class="leftline" >停车时长(小时)</p>   <p  class="rightline" id="timeval" >3</p></div>
+	<div id="price"><p class="leftline" >价格总计(元)</p>    <p class="rightline" id="priceval">9.00</p></div>
+	<div id="preprice"><p class="leftline" style="left: 0.65rem">预付价格(元)</p> <p class="rightline" id="priceval" style="right: 0.65rem;font-size:1rem;color:#e43614">3.00</p></div>
+    <div id="bottom_bar"></div>
+   </div>
+
+   <div id="choosemethod">选择充值方式</div>
+   
+    <div id="method"> 
+   	    <div id="wallet" style="position: relative;color:#696969;" ><img id="pic1" src="demoimg/homeimg/wallet.png"/><div style="border-bottom: 0.03rem solid #dddddd"><span style="display: block;">我的钱包</span><span style="display: block;color:#a0a0a0">钱包余额<span style="color:red">100.00</span>元</span></div> <img class="choose" src="demoimg/homeimg/choose1.png"/></div>
+   	    <div id="zfb" style="position: relative;color:#696969;"><img id="pic2" src="demoimg/homeimg/zhi.png"/><div style="border-bottom: 0.03rem solid #dddddd"> <span style="display: block;">支付宝</span><span style="display: block;color:#a0a0a0">支付宝，知付托！</span> </div><img class="choose"  src="demoimg/homeimg/choose.png"/></div>
+   	    <div id="wechat" style="position: relative;color:#696969;"><img id="pic3" src="demoimg/homeimg/weixin.png"/><div > <span style="display: block;">微信支付</span><span style="display: block;color:#a0a0a0">安全可靠，后顾无忧！</span></div><img class="choose"  src="demoimg/homeimg/choose.png"/></div>
+    </div>
+
+
+    <input id="pay" type="button"  value="确认支付"></input>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>

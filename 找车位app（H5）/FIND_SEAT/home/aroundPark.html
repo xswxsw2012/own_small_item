@@ -1,0 +1,80 @@
+<div id="aroundPark" class="bin-page">
+	<style>
+	#aroundPark .aPark-item {
+		height: 3.5rem;
+		text-align: center;
+    	background-color: white;
+    	border-bottom: 1px solid #F6F6F6;
+	}
+
+	#aroundPark .aPark-introduction{
+		background-color: white;
+	    float: left;
+	    width: 70%;
+	    height: 3rem;
+	    margin-top: 0.5rem;
+	    margin-left: 0.4rem;
+	}
+	#aroundPark .aPark-name {
+		color: #666666;
+	    font-size: 0.8rem;
+	    display: block;
+	    text-align: left;
+	    float: left;
+	}
+	#aroundPark .aPark-number{
+		color: #9B9B9B;
+	    font-size: 0.8rem;
+	    display: block;
+	    text-align: left;
+	}
+	#aroundPark .aPark-position {
+		color: #9B9B9B;
+	    font-size: 0.7rem;
+	    font-family: 微软雅黑;
+	    display: block;
+	    text-align: left;
+	    margin-top: 0.2rem;
+	}
+	#aroundPark .aPark-line{
+		width: 1.6px;
+	    background: #F6F6F6;
+	    height: 3rem;
+	    float: left;
+	    margin-top: 0.2rem;
+	}
+	#aroundPark .distance-icon{
+		margin-top: 0.6rem;
+    	width: 1rem;
+	}
+	#aroundPark .distance-span {
+		display: block;
+    	font-size: 0.7rem;
+    	color: #9B9B9B;
+	}
+
+	</style>
+	<script type="text/x-underscore-template" id="aPark-items">
+		<div id="aPark-item" class="aPark-item">
+    		<div id="aPark-introduction" class="aPark-introduction">
+    			<span class="aPark-name"><%=name%></span>
+    			<span class="aPark-number">&nbsp;-&nbsp;空车位<%=number_blank%></span>
+    			<span class="aPark-position"><%=position%></span>
+    		</div>
+    		<div class="aPark-line"></div>
+    		<div class="aPark-distance">
+    			<img class="distance-icon" src="demoimg/homeimg/detail-navigate.png" />
+    			<span class="distance-span"><%=distance%></span>
+    		</div>
+    	</div>
+	</script>
+
+	
+	<div id="naviBar" class="bin-page-navi-bar" naviTitle="text:附近停车场" naviRight="hide:true">	    
+	</div>
+    <div id="bin-page-content" class="bin-page-content">
+
+	</div>
+
+
+</div>

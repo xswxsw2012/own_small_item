@@ -1,0 +1,89 @@
+<div id="Mycoupon" class="bin-page">
+	<style>
+		#Mycoupon .coupon-item{
+			position: relative;
+			/*width: 14.75rem;*/
+			width: 100%;
+			height: 5.75rem;
+			/*left: 50%;
+			transform: translateX(-50%);*/
+			background-image: url("demoimg/homeimg/card2.png");
+			background-size: cover;
+			margin-top: 0.6rem;
+		}
+		#Mycoupon .item-top{
+			width: 100%;
+			height: 3.5rem;
+		}
+		#Mycoupon .top-left{
+			float: left;
+			left: 0;
+			font-size: 1rem;
+			color: #fff;
+			line-height: 3.5rem;
+			margin-left: 0.6rem; 
+		}
+		#Mycoupon .top-right{
+			float: right;
+			line-height: 3.5rem;
+			margin-right: 0.6rem;
+		}
+		#Mycoupon .right-money{
+			float: left;
+			font-size: 1.4rem;
+			color: #fff;
+		}
+		#Mycoupon .right-uinte{
+			font-size: 0.8rem;
+			color: #fff;
+		}
+		#Mycoupon .item-bottom{
+			height: 2.2rem;
+			width: 100%;
+		}
+		#Mycoupon .bottom-left{
+			float: left;
+			margin-left: 0.6rem;
+			line-height: 2.2rem;
+		}
+		#Mycoupon .left-text{
+			font-size: 0.6rem;
+			color: #9a9a9a;
+		}
+		#Mycoupon .left-date{
+			font-size: 0.6rem;
+			color: #9a9a9a;
+		}
+		#Mycoupon .right-state{
+			float: right;
+			margin-right: 0.6rem;
+			line-height: 2.2rem;
+			font-size: 0.6rem;
+			color: #9a9a9a;
+		}
+	</style>
+	<script type="text/x-underscore-template" id="template-item">
+		<div class="coupon-item">
+			<div class="item-top">
+				<div class="top-left"><%=name%></div>
+				<div class="top-right">
+					<span class="right-uinte">元</span>
+					<span class="right-money"><%=money%></span>	
+				</div>
+			</div>
+			<div style="clear: both"></div>
+			<div class="item-bottom">
+				<div class="bottom-left">
+					<span class="left-text">有效期至</span>
+					<span class="left-date"><%=date%></span>
+				</div>
+				<div class="right-state"><%=state%></div>
+			</div>
+		</div>
+	</script>
+
+	<div class="bin-page-navi-bar" naviTitle="text:我的卡劵" ></div>
+	<div class="bin-page-content">
+		<div id="listView" class="bin-list-view" style="height: 100%; padding: 0 0.5rem"></div>
+	</div>
+</div>

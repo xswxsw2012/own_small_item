@@ -1,0 +1,163 @@
+<div id="redView" class="bin-page">
+	<style>
+		#redView .red-title{
+			position: absolute;
+			height: 2.2rem;
+			width: 100%;
+			background-color: #019a66;
+		}
+		#redView .mask{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #787878;
+			opacity: 0.5;
+			z-index: 100;
+		}
+		#redView .red-bg{
+			position: absolute;
+			width: 14.25rem;
+			height: 14.45rem;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			/*border: 1px solid #000;	*/
+			z-index: 200;
+		}
+		#redView .red-img{
+			position: relative;
+			width: 14.25rem;
+			height: 14.45rem;
+			background-image: url("demoimg/newimg/red_bg.png");
+			background-size: cover;
+		}
+		
+		#redView .close{
+			position: absolute;
+			right: 0.6rem;
+			top: 0;
+		}
+		#redView .close-img{
+			display: inline-block;
+			/*position: absolute;*/
+			width: 0.5rem;
+			height: 0.5rem;
+			background-image: url("demoimg/newimg/close.png"); 
+			background-size: cover;	
+		}
+		#redView .close-imgbtn{  /*用于扩大关闭点击范围*/
+			position: absolute;
+			width: 2rem;
+			height: 2rem;
+			top: 0;
+			right: -0.5rem;
+		}
+		#redView .red-money{
+			position: absolute;
+			width: 10.76rem;
+			height: 2.7rem;
+			top: 1rem;
+			left: 1.5rem;
+		}
+		#redView .money-name{
+			height: 2.7rem;
+			line-height: 2.7rem;
+			width: 100%;
+			font-size: 0.7rem;
+			color: #fff;
+		}
+		#redView .money-count,
+		#redView .money-unit{
+			display: inline-block;
+			float: right;
+			height: 2.7rem;
+			line-height: 2.7rem;
+			color: #fff;
+		}
+		#redView .money-count{
+			font-size: 1.05rem;
+		}
+		#redView .money-unit{
+			font-size: 0.7rem;
+		}
+		#redView .red-infor{
+			position: absolute;
+			height: 3.4rem;
+			width: 11.6rem;
+			top: 6.25rem;
+			left: 1.15rem;
+		}
+		#redView .infor-name{
+			display: inline-block;
+			font-size: 1rem;
+			color: #e9c216;
+			height: 1.5rem;
+			width: 100%;
+			text-align: center;
+
+		}
+		#redView .infor-text{
+			display: inline-block;
+			font-size: 0.6rem;
+			width: 100%;
+			color: #e9c216;
+			text-align: center;
+		}
+		#redView .infor-date{
+			display: inline-block;
+			font-size: 0.6rem;
+			width: 100%;
+			color: #e9c216;
+			text-align: center;
+		}
+		#redView .red-get{
+			position: absolute;
+			height: 2rem;
+			width: 100%;
+			bottom: 1.3rem;
+			text-align: center;
+		}
+		#redView .get-span{
+			display: inline-block;
+			/*height: 100%;
+			width: 6.15rem;*/
+			/*text-align: center;*/
+			margin: 0 auto;
+		}
+		#redView .get-span>i{
+			display: inline-block;
+			height: 1.8rem;
+			width: 6.4rem;
+			background-size: cover;
+		}
+		#redView .get-img-in{
+			background-image: url("demoimg/newimg/btn_11.png"); 
+		}
+		#redView .get-img-out{
+			background-image: url("demoimg/newimg/btn_22.png");
+		}
+
+	</style>
+	<div class="bin-page-content" id="">
+		<div>
+			<div class="red-title"></div>
+			<div class="mask"></div>
+			<div class="red-bg">
+				<div class="red-img">
+					<div class="close"><span class="close-img"></span><i class="close-imgbtn"></i></div>
+					<div class="red-money">
+						<span class="money-name">停车易代金券</span>
+						<span class="money-unit">元</span>
+						<span class="money-count">8</span>
+					</div>
+					<div class="red-infor">
+						<span class="infor-name">恭喜您！</span>
+						<span class="infor-text">获得由停车易提供的8元停车代金券一张</span>
+						<span class="infor-date">（有效期至2015年12月30日）</span>
+					</div>
+					<div class="red-get"><span class="get-span"><i class="get-img-in"></i></span></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

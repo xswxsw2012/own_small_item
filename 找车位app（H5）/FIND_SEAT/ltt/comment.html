@@ -1,0 +1,110 @@
+<div id="comment" class="bin-page">
+<style>
+  #comment #toptext{
+  	height:3.925rem;
+  	width:100%;
+  	background-color:#f0f0f0;
+  	position: relative;
+  	font-size: 0.6rem;
+  	padding-left: 0.675rem;
+  	border-bottom: 0.01rem solid #dddddd;
+  }
+
+  #comment #comment-item{
+  	height: 3.325rem;
+  	width: 100%;
+  	border-bottom: 0.01rem solid #dddddd;
+  }
+
+  #comment #name{
+  	font-size:0.8rem;
+  	font-weight: 500;
+  	position:absolute;
+  	margin-top:0.575rem;
+  }
+
+   #comment #location{
+   	font-size:0.5rem;
+   	color:#c4c4c4;
+   	margin-top: 1.5rem;
+   	position: absolute;
+   }
+
+   #comment #type{
+   	position: absolute;
+   	margin-top: 2.6rem;
+   }
+
+   #comment #stime{
+   	position:absolute;
+   	margin-top:2.6rem;
+   	margin-left:6.2rem;
+   }
+
+  #comment #stopnum{
+  	position:absolute;
+  	margin-top: 2.6rem;
+  	margin-left: 11.95rem;
+  }
+
+ #comment #userinfo{
+  font-size: 0.5rem;
+  margin-left: 2.425rem;
+ }
+
+#comment #date{
+	font-size: 0.375rem;
+	margin-top:-0.5rem;
+}
+
+#comment #commenttext{
+  margin-left:0.625rem;
+  font-size: 0.55rem;
+
+}
+
+#comment #headImg{
+	width: 1.55rem;
+	height: 1.55rem;
+	float: left;
+	margin-left: 0.625rem;
+}
+
+#comment #listView{
+	width: 100%;
+	overflow: hidden;
+	border-image: 0rem;
+	position:absolute;
+	bottom:0rem;
+	top:4rem;
+}
+</style>
+
+<script type="text/x-underscore-template" id="template-item2">
+	<div id="comment-item">
+   	 <div><img  id="headImg" src="demoimg/parkimg/headImg.jpg"></div> 
+   	 <div id="userinfo">
+   	    <p><%=userID%></p>  
+   	     <p id="date"><%=date%></p>
+   	 </div> 
+   	 <div id="commenttext"><%=con%></div>
+   </div> 
+</script>
+
+
+
+
+
+<div id="naviBar" class="bin-page-navi-bar" naviTitle="text:停车场评价" naviRight="image:url('demoimg/orderimg/writeReviewIoc.png')"></div>
+<div class="bin-page-content" style="background-color: white">
+  <div id="toptext">
+  	 <span id="name"></span>
+  	 <p id="location"></p>
+  	 <span id="type"></span>
+  	 <span id="stime"></span>
+  	 <span id="stopnum"></span>
+  </div>
+  <div id="listViewPre"></div>
+  <div id="listView">
+  </div>
+</div>

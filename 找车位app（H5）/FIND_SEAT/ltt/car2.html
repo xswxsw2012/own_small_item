@@ -1,0 +1,131 @@
+<div id="carView" class="bin-page">
+
+<style>
+  #carView .car-item{
+  	height: 3.05rem;
+  	border-bottom:0.05rem solid #dddddd;
+  	width:120%;
+  	position: relative;
+  	background-color: #ffffff;
+  	margin-left:-3rem;
+  	/*overflow-x: hidden;
+    overflow-y:auto;*/
+    overflow: hidden;
+  }
+
+  #carView .number{
+  	font-size:0.7rem;
+  	color: #666666;
+  	position: relative;
+  	padding-top:0.5rem;
+  	padding-left:3.5rem 
+  }
+
+  #carView .band{
+  	font-size: 0.7rem;
+  	color: #999999;
+  	position: relative;
+  	padding-left:3.5rem;
+  }
+
+  #carView #check{
+  	font-size: 0.7rem;
+  	color: #999999;
+  	position: absolute;
+  	margin-top: -2rem;
+  	margin-left: 14rem;
+  }
+
+  #carView #addcar{
+  	height: 2rem;
+  	width: 14.8rem;
+  	background-color:#60bc9d;
+  	border-radius: 0.2rem;
+  	bottom: 0.3rem;   
+  	position: absolute;
+  	font-size: 0.9rem;
+  	color: #ffffff;
+  	left:0.5rem;
+  	font-weight: 500;
+  	z-index: 1;
+    border:none;
+
+
+  }
+  #carView .car-cancel{
+  	 background-image: url("demoimg/userimg/delete_icon.png");
+  	 background-size: 100% 100%;
+  	 width:1rem; 
+  	 height:1rem;
+  	 position: absolute;
+  	 margin-left: 1rem;
+  	 margin-top: 1rem;
+  	 z-index: 1;
+  }
+
+ /* #carView #can-cancel-button{
+  	background-color: #e64e00;
+  	width:3.925rem; 
+  	height:3.1rem;
+  	position: absolute;
+  	margin-top:-2.3rem;
+  	right: 0rem;
+  	text-align: center;
+  	line-height: 3rem;
+  	font-size: 0.75rem;
+  }*/
+
+  #carView #listView{
+  	overflow: hidden;
+  	/*bottom: 2rem;*/
+  	height: 90%;
+  	position: absolute;
+  	width: 100%;
+  }
+
+  #carView #naviBar{
+  	font-size:0.75rem;
+  	color: #ffffff
+  }
+
+  #carView .bin-refresh-view-content{
+    overflow-x: hidden;
+  }
+
+  #carView #nocar{
+    width:5rem;
+    height:4rem;
+    margin-left: 5.5rem;
+    margin-top: 8.375rem;
+
+  }
+
+  #carView #cartxt{
+    display: block;
+    text-align: center;
+    font-size: 0.625rem;
+    color: #999999;
+  }
+</style>
+
+
+<script type="text/x-underscore-template" id="template-item">
+	
+ <div class="car-item" cancel="no">
+     <div class="car-cancel"></div>
+      <div class="number"><%=number%></div>
+      <div class="band"><%=band%></div>
+      <div id="check">设为默认<input style="top:0.5rem" id="switch" class="bin-switch" type="checkbox" checked></div>
+     <!-- <div id="can-cancel-button">删除</div> -->
+  </div>
+</script>
+
+<div id="naviBar" class="bin-page-navi-bar" naviTitle="text:车辆管理" naviRight="text:编辑"></div>
+<div class="bin-page-content">
+
+  <div id="listView" >  <!--class="bin-list-view"  bin-lazyload-container -->
+  </div>
+  <input id="addcar" type="button" value="⊕添加车辆"/>
+
+
+</div>
