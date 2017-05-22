@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>分页组件</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/zpageNav.css">
+	<script type="text/javascript" src="data/test.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="com/component.js"></script>
+</head>
+<body>
+	<div class="container body-content">
+		<header>
+			<h2>Vue.js组件分页效果</h2>
+		</header>
+		<div id="test">
+			<my-component v-on:show-page="getPageData" v-bind:pager-data="mypagerData" ></my-component>
+		</div>
+		<hr/>
+		<footer>
+			<p>&copy; 2017 - 肖思伟 - 15111980348</p>
+		</footer>
+	</div> 
+	
+	<script type="text/javascript">	                                                               
+		var getData = function(){                                               //数据处理
+			var result = [];
+			for (var i = 1; i < testData.length; i++) {	
+				result.push(testData[i]);
+			}
+			return result;
+		}
+		var vm = new Vue({
+			el: '#test',
+			mounted: function(){
+				this.dataAll = getData();                                        //数据处理,完善data数据
+				this.mypagerData.page.totalCount = this.dataAll.length-1;        //总共的数据条数
+				this.getPageData(this.mypagerData.page);
+			},
+			methods: {
+				getPageData: function (page) {
+					this.mypagerData.page.pageRows = page.pageRows;               //设置页面大小
+					this.mypagerData.page.pageCurrent = page.pageCurrent;         //设置当前页面，也会改变分页栏显示状态
+					this.mypagerData.page.totalPage = Math.ceil(this.mypagerData.page.totalCount / page.pageRows);//修改分页信息
+					var newPageInfo = [];
+					for (var i = 0; i < page.pageRows; i++) {
+						var index = i + (page.pageCurrent-1)*page.pageRows;
+						if(index > this.mypagerData.page.totalCount-1) break;
+						newPageInfo[newPageInfo.length] = this.dataAll[index];
+					}
+					this.mypagerData.data = newPageInfo;                         //为当前页面需要的数据赋值
+				}
+			},
+			components:{
+				'my-component': pager
+			},
+			data: {                                                             //所有的数据，分页数据从这里取
+				dataAll:[],                                                     //定义总体数据
+				mypagerData:{
+					data:[],                                                    //用于存放当前页面需要显示的数据
+					rows:[],                                                     //每一行的数据
+					page:{
+						pageRows:10,                                             //默认每页显示10行数据
+						totalCount:1,                                            //数据总条数
+						arrPageRows:[10,20,30],                                  //每页显示的数据可选
+						totalPage:1,                                             //初始化总页数
+						pageCurrent:1,                                           //默认当前页为第一页
+						pageSize:7                                               //一次显示的页码数
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>
