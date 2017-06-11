@@ -1,0 +1,50 @@
+<div id="wait" class="bin-page">
+	<style type="text/css">
+		#wait .loading{
+			position: absolute;
+			top: 4.9067rem;
+			left: 5.5467rem;
+			height: 4.9067rem;
+			width: 4.9067rem;
+			border-radius: 2.4533rem;
+			background-color: #FFFFFF;
+		}
+		#wait .pic{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 1.7067rem;
+			height: 1.92rem;
+			background-image: url("images/advice.png"); 
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#wait .text{
+			position: relative;
+			top: 10.6667rem;
+			text-align: center;
+			font-size: 0.6827rem;
+			color: #979797;
+		}
+		#wait .ordering{
+			position: relative;
+			top: 12.5rem;
+			width: 5.9733rem;
+			height: 1.7067rem;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 1.7067rem;
+			font-size: 0.6827rem;
+			color: #FFFFFF;
+			border-radius: 0.2rem;
+			background-color: red;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:三斤耗儿鱼-点菜" naviLeft="" naviRight=""></div>
+	<div class="bin-page-content" style="background-color: #f4f4f4">
+		<div class="loading"><span class="pic"></span></div>
+		<div class="text">厨房已开始制作，请耐心等候</div>
+		<div class="ordering" @click="goOrder">继续点菜</div>
+	</div>
+</div>

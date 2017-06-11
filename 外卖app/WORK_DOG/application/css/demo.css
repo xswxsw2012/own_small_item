@@ -1,0 +1,64 @@
+html
+{   
+    font-family: SanFrancisco, Helvetica , "Microsoft YaHei", Arial, sans-serif;
+}
+
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input
+{
+    font-size: 0.7rem;
+    padding: 0px;
+}
+
+.bin-page-navi-title
+{
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight:normal;
+}
+
+.bin-page-navi-text
+{
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.bin-page-navi-bar
+{
+    background-color: #019a66;
+    height: 2.2rem;
+    line-height: 2.2rem;
+}
+
+.bin-page-navi-bar+.bin-page-content
+{
+    top:2.2rem;
+}
+
+/*.bin-page
+{
+    background-image: url("../img/page_bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}*/
+
+.bin-page-content
+{
+    /*background-color: transparent;*/
+}
+
+.bin-page-navi-left
+{
+    background-size: 0.55rem 1.1rem;
+    background-position: 0.5rem 50%;
+
+    background-image: url("../img/left.png");
+}

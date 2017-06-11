@@ -1,0 +1,127 @@
+[{
+    "id": 1,
+    "name": "主菜",
+    "icon": "http://dummyimage.com/64x64/ccc/333.jpg",
+    "items": [{
+        "id": 1,
+        "name": "水泊梁山鸡",
+        "price": 298.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/wmproduct/cebb12036481ac8eaeb34663dbb72ac2108972.jpg"
+    }, {
+        "id": 2,
+        "name": "潜江油焖大虾",
+        "price": 128.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/xianfu/54ad3c26c4713f34410b56f7d03310c9405413.jpg"
+    }, {
+        "id": 2,
+        "name": "北京烤鸭",
+        "price": 88.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/cf36e31322180cc9ad44f85972ab115f347625.jpg"
+    }]
+},
+{
+    "id": 2,
+    "name": "热菜",
+    "icon": "http://dummyimage.com/64x64/ccc/333.jpg",
+    "items": [{
+        "id": 1,
+        "name": "卤香肥肠",
+        "price": 25.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/xianfu/51032763b054948504f09d904ceed22b57344.jpg"
+    }, {
+        "id": 2,
+        "name": "虾饺",
+        "price": 10.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/bc02344fc726126fa823f962d12b3cf536864.jpg"
+    }, {
+        "id": 3,
+        "name": "梅林午餐肉",
+        "price": 15.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/40c5b06fb9bdbb1a35d9aa2208ee87db77824.jpg"
+    }, {
+        "id": 4,
+        "name": "老肉片",
+        "price": 10.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/eaeae015b134b94dac7d8adfe576ef7e90112.jpg"
+    }]
+},
+{
+    "id": 3,
+    "name": "凉菜",
+    "icon": "http://dummyimage.com/64x64/ccc/333.jpg",
+    "items": [{
+        "id": 1,
+        "name": "酥油花生",
+        "price": 10.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/xianfu/ca0925d4782d6b8f86142d5f78e3579f73728.jpg"
+    }, {
+        "id": 2,
+        "name": "辣子藕丁",
+        "price": 18.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/b10a1681ff39d12197a9e12fd762d4cf80807.jpg"
+    }, {
+        "id": 3,
+        "name": "烧椒皮蛋",
+        "price": 18.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/xianfu/77b8de65faff6e5a6d5939241bcb8e1567042.jpg"
+    }]
+},
+{
+    "id": 4,
+    "name": "汤品",
+    "icon": "http://dummyimage.com/64x64/ccc/333.jpg",
+    "items": [{
+        "id": 1,
+        "name": "土罐牛鞭汤",
+        "price": 188.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/wmproduct/578e7faad62054e9af4af64aa7c0a28472625.jpg"
+    }, {
+        "id": 2,
+        "name": "甲鱼汤",
+        "price": 138.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/wmproduct/fa84df26175295b7450dcf40b3e5154b155363.jpg"
+    }, {
+        "id": 3,
+        "name": "肚子鸡锅汤",
+        "price": 78.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/70600080cbca12362753522fb8dc4b9258028.jpg"
+    }]
+},
+{
+    "id": 5,
+    "name": "点心",
+    "icon": "http://dummyimage.com/64x64/ccc/333.jpg",
+    "items": [{
+        "id": 1,
+        "name": "香脆香蕉",
+        "price": 20.00,
+        "unit": "份",
+        "pic": "http://p1.meituan.net/210.0/xianfu/55a21c77a3cf76bbc1c9eed5d803fede289834.jpg"
+    }, {
+        "id": 2,
+        "name": "贵妃糍粑",
+        "price": 20.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/xianfu/40c95cfbb8408e9abe9065ba2d5f3a3e153036.jpg"
+    }, {
+        "id": 3,
+        "name": "香酥鸡柳",
+        "price": 22.00,
+        "unit": "份",
+        "pic": "http://p0.meituan.net/210.0/xianfu/9b810616285b71316211693b14153df4363325.jpg"
+    }]
+}
+]

@@ -1,0 +1,282 @@
+<div id="start" class="bin-page">
+	<style type="text/css">
+		#start .start-head{
+			position: relative;
+			width: 100%;
+			height: 2.13rem;
+			background-color: #F00000;
+		}
+		#start .head-name{
+			width: 100%;
+			height: 2.13rem;
+			line-height: 2.13rem;
+			font-size: 0.64rem;
+			color: #FFF;
+			text-align: center;
+		}
+		#start .head-tip{
+			position: absolute;
+			width: 1.365rem;
+			height: 1.365rem;
+			top: 0.427rem;
+			left: 0.427rem;
+			background-image: url("images/homepage1.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			border-radius: 0.6825rem;
+		}
+		#start .start-content{
+			width: 100%;
+			height: 21.3333rem;
+			background-color: #fff;
+		}
+		#start .menu-nav{
+			position: relative;
+			float: left;
+			width: 18.66%;
+			height: 100%;
+			background-color: #f4f4f4;
+		}
+		#start .menu-meil{
+			float: right;
+			height: 100%;
+			width: 81.34%;
+			overflow: hidden;
+		}
+		#start .start-footer{
+			width: 100%;
+			height: 2.1333rem;
+			background-color: #3d3b39;
+		}
+		#start .menu-count{
+			float: left;
+			height: 100%;
+			width: 70%;
+		}
+		#start .count{
+			display: inline-block;
+			margin-left: 0.64rem;
+			margin-top: 0.64rem;
+			font-size: 0.64rem;
+			color: #fff;
+		}
+		#start .menu-sure{
+			float: right;
+			width: 30%;
+			height: 100%;
+			text-align: center;
+			line-height: 2.1333rem;
+			font-size: 0.64rem;
+			color: #8f8e8e;
+			background-color: #6b635e;
+		}
+		#start .sure{
+			font-size: 0.64rem;
+			color: #8f8e8e;
+		}
+		#start .menu-nav ul{
+			margin: 0;
+			padding: 0;
+		}
+		#start .menu-nav li{
+			height: 3.4133rem;
+			list-style: none;
+		}
+		#start .main{
+			padding-top: 1.0667rem;
+		}
+		#start .img{
+			display: block;
+			height: 1.3653rem;
+			width: 1.3653rem;
+			border-radius: 0.6826rem;
+			margin: 0 auto;
+			background-color: #dbdbdb;
+		}
+		#start .color{       /*文字背景色*/
+			color: #f24436;
+		}
+		#start .backColor{   /*图片背景色*/
+			background-color: #f24436;
+		}
+		#start .text{
+			height: 0.9813rem;
+			line-height: 0.9813rem;
+			text-align: center;
+			font-size: 0.5547rem;
+		}
+		#start .middle-line{
+			height: 0.9386rem;
+			width: 2px;
+			margin: 0 auto;
+			background-color: #dbdbdb;
+		}
+		#start .img-item{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: block;
+			height: 0.8533rem;
+			width: 0.8533rem;
+			background-size: 100% 100%;
+		}
+		#start .main-img{
+			background-image: url("images/homepage2.png");
+		}
+		#start .hot-img{
+			background-image: url("images/homepage3.png");
+		}
+		#start .ice-img{
+			background-image: url("images/homepage4.png");
+		}
+		#start .soup-img{
+			background-image: url("images/homepage5.png");
+		}
+		#start .dessert-img{
+			background-image: url("images/homepage6.png");
+		}
+		#start .triangle{
+			position: absolute;
+			left: 2.3467rem;
+			top: 1.3653rem;
+			width: 0;
+			height: 0;
+			border-top: 0.32rem solid transparent;
+			border-right: 0.64rem solid #FFFFFF;
+			border-bottom: 0.32rem solid transparent;
+		}
+		#start .get-item{
+			position: relative;
+			height: 100%;
+			margin: 0 0.4367rem;
+			border-bottom: 1px solid #aeb0b5;
+		}
+		#start .menu-type{
+			width: 100%;
+			height: 1.4933rem;
+			line-height: 1.4933rem;
+			font-size: 0.512rem;
+		}
+		#start .item-img{
+			width: 100%;
+			height: 7.4667rem;
+		}
+		#start .item-name{
+			font-size: 0.768rem;
+		}
+		#start .price{
+			font-size: 0.512rem;
+			margin-bottom: 0.64rem;
+		}
+		#start .item-unit{
+			color: #aeb0b5;
+		}
+		#start .icon{
+			position: absolute;
+			right: 0;
+			bottom: 0.64rem;
+			width: 4.2667rem;
+			height: 1.0667rem;
+		}
+		#start #dec{
+			display: inline-block;
+			width: 25%;
+			height: inherit;
+			background-image: url("images/decress.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#start #num{
+			position: relative;
+			top: -0.2986rem;
+			display: inline-block;
+			width: 40%;
+			height: 1.0667rem;
+			line-height: 1.0667rem;
+			margin: 0 5%;
+			text-align: center;
+			font-size: 0.6rem;
+			border: 1px solid #aeb0b5;
+			box-sizing: border-box;
+		}
+		#start #add{
+			float: right;
+			display: inline-block;
+			width: 25%;
+			height: inherit;
+			background-image: url("images/add.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#start .show{
+			position: absolute;
+			right: 0;
+			bottom: 2.7307rem;
+			height: 0.96rem;
+			width: 3.84rem;
+			line-height: 0.96rem;
+			color: #FFFFFF;
+			font-size: 0.512rem;
+			text-align: center;
+			background-color: rgba(0,0,0,0.5); /*设置背景透明内容不透明*/
+		}
+	</style>
+	<script type="text/x-underscore-template" id="itemTem">
+		<div class="get-item">
+			<div class="menu-type">主菜</div>
+			<img class="item-img" src=<%=pic%>>
+			<div class="item-name"><%=name%></div>
+			<div class="price"><span class="item-price">￥<%=price%></span><span class="item-unit"> / <%=unit%></span></div>
+			<div class="icon"><span id="dec"></span><input id="num" value="0" type="text" ><span id="add"></span></div>
+			<div class="show">同桌已点<span id="show-num">2</span>份</div>
+		</div>
+	</script>
+
+
+	<div class="bin-page-navi-bar" naviTitle="text:三斤耗儿鱼" naviLeft="" naviRight=""></div>
+		<div class="bin-page-content">
+			<div id="start-head" class="start-head">
+				<div class="head-name">
+					渝北店，8号桌
+				</div>
+				<div class="head-tip"></div>
+			</div>
+			<div class="start-content">
+				<div class="menu-nav">
+					<ul>
+						<li class="menu-li">
+							<div class="main menuPic"><span class="img backColor"><span class="img-item main-img"></span></span></div>
+							<div class="text color">主菜</div>
+						</li>
+						<li class="menu-li">
+							<div class="middle-line"></div>
+							<div class="hot menuPic"><span class="img"><span class="img-item hot-img"></span></span></div>
+							<div class="text">热菜</div>
+						</li>
+						<li class="menu-li">
+							<div class="middle-line"></div>
+							<div class="ice menuPic"><span class="img"><span class="img-item ice-img"></span></span></div>
+							<div class="text">凉菜</div>
+						</li>
+						<li class="menu-li">
+							<div class="middle-line"></div>
+							<div class="soup menuPic"><span class="img"><span class="img-item soup-img"></span></span></div>
+							<div class="text">汤品</div>
+						</li>
+						<li class="menu-li">
+							<div class="middle-line"></div>
+							<div class="dessert menuPic"><span class="img"><span class="img-item dessert-img"></span></span></div>
+							<div class="text">点心</div>
+						</li>
+					</ul>
+					<div class="triangle"></div>
+				</div>
+				<div class="menu-meil" id="meilinf"></div>
+			</div>
+			<div class="start-footer">
+				<div class="menu-count"><span class="count">已点<span id="count" class="number">0</span>道菜</span></div>
+				<div class="menu-sure">已点菜单</div>
+			</div>
+		</div>
+</div>

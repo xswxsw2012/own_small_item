@@ -1,0 +1,172 @@
+<div id="ordered" class="bin-page">
+	<style type="text/css">
+		#ordered .header{
+			position: relative;
+			width: 100%;
+			height: 2.1333rem;
+			line-height: 2.1333rem;
+			text-align: center;
+			background-color: #FFFFFF;
+		}
+		#ordered .text{
+			font-size: 0.8533rem;
+		}
+		#ordered .pre{
+			position: absolute;
+			top: 0.5333rem;
+			left: 0.5333rem;
+			height: 1.0666rem;
+			width: 0.5333rem;
+			background-image: url("images/left.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#ordered .content{
+			width: 100%;
+			height: 21.5467rem;
+			overflow-y: scroll;
+		}
+		#ordered .food{
+			margin-top: 0.768rem;
+			width: 100%;
+		}
+		#ordered .order{
+			padding: 0 0.5333rem;
+			height: 2rem;
+			background-color: blue;
+		}
+		#ordered .footer{
+			width: 100%;
+			height: 2.1333rem;
+			background-color: #3d3b39;
+		}
+		#ordered .menu-finish{
+			float: left;
+			height: 100%;
+			width: 70%;
+		}
+		#ordered .finish{
+			display: inline-block;
+			margin-left: 0.64rem;
+			margin-top: 0.64rem;
+			font-size: 0.64rem;
+			color: #fff;
+		}
+		#ordered .convey{
+			float: right;
+			width: 30%;
+			height: 100%;
+			text-align: center;
+			line-height: 2.1333rem;
+			font-size: 0.64rem;
+			color: #FFFFFF;
+			background-color: #f24436;
+		}
+		#ordered .food{
+			background-color: #FFFFFF;
+		}
+		#ordered .head{
+			position: relative;
+			margin: 0 0.5333rem;
+			height: 1.92rem;
+			line-height: 1.92rem;
+			border-bottom: 1px dashed #8d8d8d;
+		}
+		#ordered .head-img{
+			position: absolute;
+			top: 0.4266rem;
+			left: 0rem;
+			display: block;
+			width: 1.0667rem;
+			height: 1.0667rem;
+			border-radius: 0.5333rem;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#ordered .head-name{
+			padding-left: 1.4933rem;
+			font-size: 0.5973rem;
+			color: #8d8d8d;
+		}
+		#ordered .cont{
+			width: 100%;
+			font-size: 0.7253rem;
+			background-color: #FFFFFF;
+		}
+		#ordered .name{
+			float: left;
+			height: 1.92rem;
+			line-height: 1.92rem;
+			padding-left: 0.5333rem;
+			width: 40%;
+		}
+		#ordered .price{
+			float: left;
+			height: 1.92rem;
+			line-height: 1.92rem;
+			width: 21%;
+		}
+		#ordered .icon{
+			float: right;
+			height: 1.92rem;
+			width: 35%;
+		}
+		#ordered #sub{
+			display: inline-block;
+			width: 1.0667rem;
+			height: 1.0667rem;
+			margin-top: 0.3707rem;
+			margin-left: 0.3707rem;
+			background-image: url("images/decress.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#ordered #newNum{
+			position: relative;
+			top: -0.2986rem;
+			display: inline-block;
+			width: 40%;
+			height: 1.0667rem;
+			line-height: 1.0667rem;
+			margin: 0 5%;
+			text-align: center;
+			font-size: 0.6rem;
+			border: 1px solid #aeb0b5;
+			box-sizing: border-box;
+		}
+		#ordered #plus{
+			display: inline-block;
+			width: 1.0667rem;
+			height: 1.0667rem;
+			background-image: url("images/add.png");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#ordered #note{
+			position: absolute;
+			bottom: 2.5333rem;
+			height: 1.92rem;
+			width: 100%;
+			line-height: 1.92rem;
+			color: #989898;
+			font-size: 0.5973rem;
+			padding-left: 0.64rem;
+			background-color: #FFFFFF;
+		}
+	</style>
+	<div class="bin-page-navi-bar" naviTitle="text:三斤耗儿鱼-点菜" naviLeft="" naviRight=""></div>
+		<div class="bin-page-content" style="background-color: #f4f4f4">
+			<div class="header">
+				<div class="text">确认订单</div>
+				<div class="pre"></div>
+			</div>
+			<div class="content">
+				<div class="food" id="food"></div>
+				<div class="note" id="note">备注：（选填）请输入您的口味、要求、忌口等</div>
+			</div>
+			<div class="footer">
+				<div class="menu-finish"><span class="finish">已点<span id="amount" class="amount">0</span>道菜</span></div>
+				<div class="convey" @click="showAlert">传送厨房</div>
+			</div>
+		</div>
+</div>
